@@ -1,0 +1,13 @@
+@import './variables';
+@import './mixins';
+@import './normalize';
+@import './layout';
+/* Components */
+@import './components/button';
+@import './components/top-menu-btn.scss';
+
+/*Sections */
+@import './sections/top-menu';
+@import './sections/aside';
+@import './sections/main';
+/*Pages*/

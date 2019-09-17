@@ -1,0 +1,16 @@
+.top-menu__btn {
+  background-color: $background-white;
+  text-decoration: none;
+  display: inline-block;
+  width: auto;
+  height: 40px;
+  padding: 0 10px;
+  text-align: center;
+  line-height: 40px;
+  color: $text-menu-color;
+  border-right: 1px solid $background-light;
+
+  &:hover {
+    background-color: $background-light;
+  }
+}
