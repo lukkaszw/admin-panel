@@ -1,8 +1,9 @@
 .main-container {
-  height: 100vh;
-  width: calc(100% - 200px);
+  margin: 40px 0 0 200px;
+  padding: 10px;
 
   @media (max-width: 800px) {
-    width: 100%;
+    margin: 40px 0 0 0;
+    padding: 0;
   }
 }

@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <link href="https://fonts.googleapis.com/css?family=Satisfy&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/Glyphter.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="registration-form-template">
@@ -13,30 +14,30 @@
     <nav class="top-bar">
         <ul class="menu">
           <li class="menu__item">
-            <span class="menu__btn" href="">
-              <img class="menu__icon" src="images/icons/wallet.svg" alt="">
+            <div class="menu__btn">
+              <i class="icon-wallet text-md menu__text"></i>
               <h4 class="menu__text text-md">$1,500 00</h4>
               <button class="btn btn--inline menu__icon-wrapper">
-                <img class="menu__icon menu__icon--small" src="images/icons/arrow-down-small.svg" alt="">
+                <i class="icon-arrow-down-small menu__text text-small text-dark"></i>
               </button>
-            </span>
+            </div>
           </li>
           <li class="menu__item">
             <a class="menu__btn menu__btn--absolute" href="">
-              <img class="menu__icon" src="images/icons/notification.svg" alt="">
+              <i class="icon-notification menu__text text-md"></i>
               <span class="menu__icon-signal">
               </span>
             </a>
           </li>
           <li class="menu__item">
             <a class="menu__btn" href="">
-                <img class="menu__icon" src="images/icons/profile.svg" alt="">
-                <span class="menu__link menu__text text-small text-blue text-hide-sm" href="">Leonardo Dicaprio</span>
+                <i class="icon-profile menu__text text-md"></i>
+                <span class="menu__link menu__text text-small text-blue text-hide-sm">Leonardo Dicaprio</span>
             </a>
           </li>
           <li class="menu__item">
             <a href="#" class="menu__btn">
-                <img class="menu__icon" src="images/icons/quit.svg" alt="">
+                <i class="icon-quit menu__text text-md"></i>
             </a>
           </li>
         </ul>
@@ -47,42 +48,49 @@
         <li class="menu__item">
           <a href="#" class="menu__btn menu__btn--dark">
             <span class="menu__signer"></span>
+            <i class="icon-general menu__text text-small"></i>
             <span class="menu__text text-small">General</span>
           </a>
         </li>
         <li class="menu__item">
             <a href="#" class="menu__btn menu__btn--dark">
                 <span class="menu__signer"></span>
+                <i class="icon-details menu__text text-small"></i>
                 <span class="menu__text text-small">Details</span>
             </a>
         </li>
         <li class="menu__item">
             <a href="#" class="menu__btn menu__btn--dark">
                 <span class="menu__signer"></span>
+                <i class="icon-links menu__text text-small"></i>
                 <span class="menu__text text-small">Links</span>
             </a>
         </li>
         <li class="menu__item">
             <a href="#" class="menu__btn menu__btn--dark">
                 <span class="menu__signer"></span>
+                <i class="icon-banners menu__text text-small"></i>
                 <span class="menu__text text-small">Banners</span>
             </a>
         </li>
         <li class="menu__item">
             <a href="#" class="menu__btn menu__btn--dark">
                 <span class="menu__signer"></span>
+                <i class="icon-personaldata menu__text text-small"></i>
                 <span class="menu__text text-small">Personal data</span>
             </a>
         </li>
         <li class="menu__item">
             <a href="#" class="menu__btn menu__btn--dark">
                 <span class="menu__signer"></span>
+                <i class="icon-payout menu__text text-small"></i>
                 <span class="menu__text text-small">Payout</span>
             </a>
         </li>
         <li class="menu__item">
             <a href="#" class="menu__btn menu__btn--dark">
                 <span class="menu__signer"></span>
+                <i class="icon-postback menu__text text-small"></i>
                 <span class="menu__text text-small">Postback</span>
             </a>
         </li>
@@ -105,10 +113,123 @@
         <span class="burger-menu__inside"></span>
     </div>
 
-    <div class="main-container col">
-      
-      
+    <div class="main-container">
 
+      <section class="section" id="generals">
+        <header class="section__header">
+          <h2 class="section__title">General Statistic</h2>
+        </header>
+        <article class="section__article">
+
+        </article>
+      </section>
+
+      <section class="section" id="links">
+          <header class="section__header">
+            <h2 class="section__title">Links</h2>
+          </header>
+          <article class="section__article">
+            <button class="btn">+add new</button>
+            <div class="rwd-table rwd-table--1000">
+              <table class="table table--600 text-v-small">
+                <tr class="table__row">
+                  <td class="table__cell cell-5 ta-left">Home page</td>
+                  <td class="table__cell cell-4 ta-left">
+                    <a href="http://www.homepage.com" class="link">http://www.homepage.com</a>
+                  </td>
+                  <td class="table__cell cell-3 ta-right">
+                    icon icon
+                  </td>
+                </tr>
+                <tr class="table__row">
+                  <td class="table__cell cell-5 ta-left">Currently offer</td>
+                  <td class="table__cell cell-4 ta-left">
+                    <a href="http://www.homepage.com" class="link">http://www.currently.com</a>
+                  </td>
+                  <td class="table__cell cell-3 ta-right">
+                    icon icon
+                  </td>
+                </tr>
+                <tr class="table__row">
+                    <td class="table__cell cell-5 ta-left">Blurpix</td>
+                    <td class="table__cell cell-4 ta-left">
+                      <a href="http://www.homepage.com" class="link">http://www.blurpix.com</a>
+                    </td>
+                    <td class="table__cell cell-3 ta-right">
+                      icon icon
+                    </td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="table__cell cell-5 ta-left">Your site</td>
+                    <td class="table__cell cell-4 ta-left">
+                      <a href="http://www.homepage.com" class="link">http://www.yoursite.com</a>
+                    </td>
+                    <td class="table__cell cell-3 ta-right">
+                      icon icon
+                    </td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="table__cell cell-5 ta-left">Google</td>
+                    <td class="table__cell cell-4 ta-left">
+                      <a href="http://www.homepage.com" class="link">http://www.google.com</a>
+                    </td>
+                    <td class="table__cell cell-3 ta-right">
+                      icon icon
+                    </td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="table__cell cell-5 ta-left">Facebook</td>
+                    <td class="table__cell cell-4 ta-left">
+                      <a href="http://www.homepage.com" class="link">http://www.facebook.com</a>
+                    </td>
+                    <td class="table__cell cell-3 ta-right">
+                      icon icon
+                    </td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="table__cell cell-5 ta-left">Dashboard</td>
+                    <td class="table__cell cell-4 ta-left">
+                      <a href="http://www.homepage.com" class="link">http://www.homepage.com</a>
+                    </td>
+                    <td class="table__cell cell-3 ta-right">
+                      icon icon
+                    </td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="table__cell cell-5 ta-left">Blurax</td>
+                    <td class="table__cell cell-4 ta-left">
+                      <a href="http://www.homepage.com" class="link">http://www.blurax.com</a>
+                    </td>
+                    <td class="table__cell cell-3 ta-right">
+                      icon icon
+                    </td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="table__cell cell-5 ta-left">Piece of Wine</td>
+                    <td class="table__cell cell-4 ta-left">
+                      <a href="http://www.homepage.com" class="link">http://www.pieceofwine.com</a>
+                    </td>
+                    <td class="table__cell cell-3 ta-right">
+                      icon icon
+                    </td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="table__cell cell-5 ta-left">Twitter</td>
+                    <td class="table__cell cell-4 ta-left">
+                      <a href="http://www.homepage.com" class="link">http://www.twitter.com</a>
+                    </td>
+                    <td class="table__cell cell-3 ta-right">
+                      icon icon
+                    </td>
+                  </tr>
+              </table>
+            </div>
+            <button class="btn">+add new</button>
+          </article>
+        </section>
+
+
+      
     </div>
 
 

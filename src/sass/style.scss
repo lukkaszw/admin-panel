@@ -10,9 +10,12 @@
 @import './components/burger-menu';
 @import './components/separator';
 @import './components/avatar';
+@import './components/table';
 
 /*Sections */
+@import './sections/main';
+@import './sections/section';
 @import './sections/top-bar';
 @import './sections/side-bar';
-@import './sections/main';
+
 /*Pages*/

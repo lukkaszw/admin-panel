@@ -83,7 +83,30 @@ body {
   margin: 0;
 }
 
+.margin-sm {
+  margin: 10px;
+}
+
+.margin-y-sm {
+  margin: 10px 0;
+}
+
+.margin-x-sm {
+  margin: 0 10px;
+}
+
 .margin-y-md {
   margin: 40px 0;
 }
 
+.ta-left {
+  text-align: left;
+}
+
+.ta-center {
+  text-align: center;
+}
+
+.ta-right {
+  text-align: right;
+}
