@@ -1,0 +1,42 @@
+.text {
+  font-family: $brand-font;
+  color: $paragraph-color;
+
+  &-bg {
+    font-size: 26px;
+  }
+
+  &-md {
+    font-size: 18px;
+  }
+
+  &-small {
+    font-size: 15px;
+  }
+
+  &-light {
+    color: $color-light;
+  }
+
+  &-silver {
+    color: $color-silver;
+  }
+
+  &-blue {
+    color: $color-blue;
+  }
+
+  &-box-title {
+    font-size: 15px;
+    text-transform: uppercase;
+    margin: 5px;
+  }
+
+  &-hide-sm {
+    @media (max-width: 800px) {
+      display: none;
+    }
+  }
+
+
+}

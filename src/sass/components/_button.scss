@@ -10,4 +10,15 @@
   &:hover {
     background-color: lighten($btn-main-color, 20%);
   }
+
+  &--inline {
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    vertical-align: center;
+
+    &:hover {
+      background-color: $background-light;
+    }
+  }
 }

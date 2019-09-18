@@ -1,0 +1,14 @@
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  text-align: right;
+
+  @media (max-width: 800px) {
+    top: 100%;
+    transform: translateY(-100%);
+    text-align: center;
+  }
+}

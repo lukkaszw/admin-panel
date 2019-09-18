@@ -1,0 +1,14 @@
+.side-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background-color: $background-dark;
+  width: 200px;
+
+
+
+  @media (max-width: 800px) {
+    transform: translateX(-100%);
+  }
+}

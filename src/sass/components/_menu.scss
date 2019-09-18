@@ -1,0 +1,86 @@
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: $text-menu-color;
+  font-size: 0;
+
+  &__item {
+    display: inline-block;
+    border-right: 1px solid $background-light;
+    &:first-of-type {
+      border-left: 1px solid $background-light;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    height: 40px;
+    text-decoration: none;
+    color: $text-menu-color;
+    padding: 0 10px;
+    position: relative;
+
+    &:hover {
+      background-color: $background-light;
+    }
+
+    &--dark:hover {
+      background-color: $btn-dark-hover;
+    }
+  }
+
+  &__icon {
+    width: 20px;
+    height: auto;
+    color: $text-menu-color;
+
+    &--small {
+      width: 10px;
+      height: auto;
+    }
+  }
+
+  &__text {
+    line-height: 40px;
+    margin: 0 10px;
+  }
+
+  &__signer {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background-color: $signer-color-no;
+  }
+
+  &__btn:hover &__signer {
+    display: block;
+  }
+
+  &__btn:hover &__text {
+    color: $color-light;
+  }
+
+  &__icon-signal {
+    position: absolute;
+    display: block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: $brand-main-color;
+    top: 25%;
+    left: 70%;
+  }
+}
+
+.menu.menu--y {
+  .menu__item {
+    display: block;
+    width: 100%;
+    border: none;
+  }
+}
+

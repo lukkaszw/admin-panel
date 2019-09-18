@@ -1,13 +1,18 @@
 @import './variables';
 @import './mixins';
 @import './normalize';
+@import './texts';
 @import './layout';
 /* Components */
 @import './components/button';
-@import './components/top-menu-btn.scss';
+@import './components/menu';
+@import './components/logo';
+@import './components/burger-menu';
+@import './components/separator';
+@import './components/avatar';
 
 /*Sections */
-@import './sections/top-menu';
-@import './sections/aside';
+@import './sections/top-bar';
+@import './sections/side-bar';
 @import './sections/main';
 /*Pages*/

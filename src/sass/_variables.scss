@@ -1,13 +1,25 @@
 /* Colors */
 $background-light: #eee;
 $background-white: #fff;
+$background-dark: #000;
 
 $paragraph-color: #000000;
 $brand-main-color: #ff0000;
-$text-menu-color: #555;
+$text-menu-color: #999;
+$text-logo: #fff;
 
 $btn-main-color: #c07a09;
 $color-light: #fff;
+$color-silver: #c0c0c0;
+$color-blue: #5997fb;
+
+$btn-dark-hover: #222;
+$signer-color-no: #a51d1d;
+$signer-color-ok: #24ad24;
+
+
+$separator-light: #aaa;
+$separator-dark: #222;
 
 /* Font sizes */
 $paragraph-font-size: 16px;
@@ -15,3 +27,4 @@ $paragraph-font-size: 16px;
 /* Fonts */
 $brand-font: "Open Sans", Helvetica, Arial;
 $paragraph-font: "Open Sans", Helvetica, Arial;
+$logo-font: 'Satisfy', cursive;

@@ -8,29 +8,20 @@ body {
 }
 
 .col-1 {width: 8.334%}
-
 .col-2 {width: 16.667%}
-
 .col-3 {width: 25%}
-
 .col-4 {width: 33.334%}
-
 .col-5 {width: 41.667%}
-
 .col-6 {width: 50%}
-
 .col-7 {width: 58.334%}
-
 .col-8 {width: 66.667%}
-
 .col-9 {width: 75%}
-
 .col-10 {width: 83.334%}
-
 .col-11 {width: 91.667%}
+.col-12 {width: 100%}
 
-.col-12 {
-  width: 100%
+[class*="col-mid"] {
+  width: 100%;
 }
 
 [class*="col-min"] {
@@ -38,61 +29,33 @@ body {
 }
 
 @media (min-width: 600px) {
-
   .col-min-1 {width: 8.334%}
-
   .col-min-2 {width: 16.667%}
-
   .col-min-3 {width: 25%}
-
   .col-min-4 {width: 33.334%}
-
   .col-min-5 {width: 41.667%}
-
   .col-min-6 {width: 50%}
-
   .col-min-7 {width: 58.334%}
-
   .col-min-8 {width: 66.667%}
-
   .col-min-9 {width: 75%}
-
   .col-min-10 {width: 83.334%}
-
   .col-min-11 {width: 91.667%}
-
   .col-min-12 {width: 100%}
 }
 
-[class*="col-mid"] {
-  width: 100%;
-}
-
 @media (min-width: 800px) {
-
-.col-mid-1 {width: 8.334%}
-
-.col-mid-2 {width: 16.667%}
-
-.col-mid-3 {width: 25%}
-
-.col-mid-4 {width: 33.334%}
-
-.col-mid-5 {width: 41.667%}
-
-.col-mid-6 {width: 50%}
-
-.col-mid-7 {width: 58.334%}
-
-.col-mid-8 {width: 66.667%}
-
-.col-mid-9 {width: 75%}
-
-.col-mid-10 {width: 83.334%}
-
-.col-mid-11 {width: 91.667%}
-
-.col-mid-12 {width: 100%}
+.col-mid-1 {min-width: 8.334%}
+.col-mid-2 {min-width: 16.667%}
+.col-mid-3 {min-width: 25%}
+.col-mid-4 {min-width: 33.334%}
+.col-mid-5 {min-width: 41.667%}
+.col-mid-6 {min-width: 50%}
+.col-mid-7 {min-width: 58.334%}
+.col-mid-8 {min-width: 66.667%}
+.col-mid-9 {min-width: 75%}
+.col-mid-10 {min-width: 83.334%}
+.col-mid-11 {min-width: 91.667%}
+.col-mid-12 {min-width: 100%}
 }
 
 [class*="col-max"] {
@@ -100,28 +63,27 @@ body {
 }
 
 @media (min-width: 1280px) {
-
-  .col-max-1 {width: 8.334%}
-
-  .col-max-2 {width: 16.667%}
-
-  .col-max-3 {width: 25%}
-
-  .col-max-4 {width: 33.334%}
-
-  .col-max-5 {width: 41.667%}
-
-  .col-max-6 {width: 50%}
-
-  .col-max-7 {width: 58.334%}
-
-  .col-max-8 {width: 66.667%}
-
-  .col-max-9 {width: 75%}
-
-  .col-max-10 {width: 83.334%}
-
-  .col-max-11 {width: 91.667%}
-
-  .col-max-12 {width: 100%}
+  .col-max-1 {max-width: 8.334%}
+  .col-max-2 {max-width: 16.667%}
+  .col-max-3 {max-width: 25%}
+  .col-max-4 {max-width: 33.334%}
+  .col-max-5 {max-width: 41.667%}
+  .col-max-6 {max-width: 50%}
+  .col-max-7 {max-width: 58.334%}
+  .col-max-8 {max-width: 66.667%}
+  .col-max-9 {max-width: 75%}
+  .col-max-10 {max-width: 83.334%}
+  .col-max-11 {max-width: 91.667%}
+  .col-max-12 {max-width: 100%}
 }
+
+
+.inline {
+  display: inline-block;
+  margin: 0;
+}
+
+.margin-y-md {
+  margin: 40px 0;
+}
+
