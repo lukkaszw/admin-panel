@@ -1,5 +1,6 @@
 .rwd-table {
   overflow: hidden;
+  margin: 20px;
 
  &--1000 {
    @media(max-width: 800px) {
@@ -22,6 +23,19 @@
 
   &__cell {
     padding: 16px 10px;
+  }
+
+  &__btn {
+    opacity: 0;
+    margin: 0 10px;
+    
+    @media(max-width: 800px) {
+      opacity: 1;
+    }
+  }
+
+  &__row:hover &__btn {
+    opacity: 1;
   }
 
   &--max {width: 100%;}

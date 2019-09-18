@@ -46,6 +46,22 @@
   }
 
   &:hover {
+    background-color: #555;
+    @media (max-width: 800px) {
+      background-color: $background-light;
+    }
+  }
+
+  &:hover::before {
+    background-color: #fff;
+  }
+
+  
+  &:hover::after {
+    background-color: #fff;
+  }
+
+  &:hover &__inside {
     background-color: #fff;
   }
 

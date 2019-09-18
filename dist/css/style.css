@@ -374,6 +374,10 @@ template {
   color: #5997fb;
 }
 
+.text-orange {
+  color: #dd9a1e;
+}
+
 .text-box-title {
   font-size: 15px;
   text-transform: uppercase;
@@ -610,7 +614,7 @@ body {
 
 /* Components */
 .btn {
-  background-color: #c07a09;
+  background-color: #d4870b;
   padding: 8px 16px;
   color: #fff;
   border: none;
@@ -620,7 +624,7 @@ body {
 }
 
 .btn:hover {
-  background-color: #f6ae39;
+  background-color: #f6b64f;
 }
 
 .btn--inline {
@@ -777,6 +781,24 @@ body {
 }
 
 .burger-menu:hover {
+  background-color: #555;
+}
+
+@media (max-width: 800px) {
+  .burger-menu:hover {
+    background-color: #eee;
+  }
+}
+
+.burger-menu:hover::before {
+  background-color: #fff;
+}
+
+.burger-menu:hover::after {
+  background-color: #fff;
+}
+
+.burger-menu:hover .burger-menu__inside {
   background-color: #fff;
 }
 
@@ -846,6 +868,7 @@ body {
 
 .rwd-table {
   overflow: hidden;
+  margin: 20px;
 }
 
 @media (max-width: 800px) {
@@ -869,6 +892,21 @@ body {
 
 .table__cell {
   padding: 16px 10px;
+}
+
+.table__btn {
+  opacity: 0;
+  margin: 0 10px;
+}
+
+@media (max-width: 800px) {
+  .table__btn {
+    opacity: 1;
+  }
+}
+
+.table__row:hover .table__btn {
+  opacity: 1;
 }
 
 .table--max {
