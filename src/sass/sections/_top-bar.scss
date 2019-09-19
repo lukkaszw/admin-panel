@@ -4,6 +4,8 @@
   left: 0;
   width: 100%;
   background-color: #fff;
+  border-top: 1px solid $background-light;
+  border-bottom: 1px solid $background-light;
   text-align: right;
 
   @media (max-width: 800px) {

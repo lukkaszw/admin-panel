@@ -110,3 +110,22 @@ body {
 .ta-right {
   text-align: right;
 }
+
+
+.row-center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.row-end {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.article-container {
+  max-width: 800px;
+  margin: 0 auto;
+}

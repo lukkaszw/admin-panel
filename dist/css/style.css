@@ -612,6 +612,31 @@ body {
   text-align: right;
 }
 
+.row-center {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.row-end {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+
+.article-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
 /* Components */
 .btn {
   background-color: #d4870b;
@@ -636,6 +661,10 @@ body {
 
 .btn--inline:hover {
   background-color: #eee;
+}
+
+.btn--square {
+  padding: 8px;
 }
 
 .menu {
@@ -871,8 +900,26 @@ body {
   margin: 20px;
 }
 
+@media (max-width: 600px) {
+  .rwd-table--600 {
+    overflow-x: auto;
+  }
+}
+
 @media (max-width: 800px) {
+  .rwd-table--800 {
+    overflow-x: auto;
+  }
+}
+
+@media (max-width: 1200px) {
   .rwd-table--1000 {
+    overflow-x: auto;
+  }
+}
+
+@media (max-width: 1200px) {
+  .rwd-table--1200 {
     overflow-x: auto;
   }
 }
@@ -957,6 +1004,14 @@ body {
   width: 200px;
 }
 
+.table--min-200 {
+  min-width: 200px;
+}
+
+.table--min-400 {
+  min-width: 400px;
+}
+
 .cell-1 {
   width: 8.334%;
 }
@@ -1003,6 +1058,79 @@ body {
 
 .cell-12 {
   width: 100%;
+}
+
+.input-dates {
+  position: relative;
+  text-align: center;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  box-shadow: 0 0 2px #aaa;
+}
+
+.input-dates::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 1px;
+  height: 80%;
+  box-shadow: 0 0 1px #aaa;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.input-dates__input {
+  margin: 0;
+  padding: 5px 10px;
+  width: 140px;
+}
+
+.input-dates__input:focus {
+  outline: 1px solid transparent;
+  background-color: #aaa;
+}
+
+.input-dates__input::-webkit-inner-spin-button {
+  display: none;
+}
+
+.input-dates__input::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  width: 10px;
+  height: 80%;
+}
+
+.input-dates__input::-webkit-calendar-picker-indicator:hover {
+  cursor: pointer;
+}
+
+.input-dates__input--first {
+  border: 1px solid transparent;
+}
+
+.input-dates__input--last {
+  border: 1px solid transparent;
+}
+
+.input-dates__icon-first {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #ccc;
+  transform: translate(-180%, -50%);
+  z-index: 0;
+}
+
+.input-dates__icon-last {
+  position: absolute;
+  color: #ccc;
+  top: 50%;
+  left: 100%;
+  transform: translate(-180%, -50%);
 }
 
 /*Sections */
@@ -1053,6 +1181,8 @@ body {
   left: 0;
   width: 100%;
   background-color: #fff;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
   text-align: right;
 }
 
@@ -1077,6 +1207,22 @@ body {
   .side-bar {
     transform: translateX(-100%);
   }
+}
+
+.general__stats {
+  max-width: 100%px;
+  margin: 0 auto;
+}
+
+.general__stat {
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+  max-width: 80%;
+  margin: 10px 20px;
+  padding: 5px 0;
+  border-bottom: 1px solid #eee;
+  -ms-flex-positive: 1;
+      flex-grow: 1;
 }
 
 /*Pages*/

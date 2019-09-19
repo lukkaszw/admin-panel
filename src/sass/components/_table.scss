@@ -2,8 +2,26 @@
   overflow: hidden;
   margin: 20px;
 
- &--1000 {
+ &--600 {
+   @media(max-width: 600px) {
+     overflow-x: auto;
+   }
+ }
+
+ &--800 {
    @media(max-width: 800px) {
+     overflow-x: auto;
+   }
+ }
+
+ &--1000 {
+  @media(max-width: 1200px) {
+    overflow-x: auto;
+  }
+}
+
+ &--1200 {
+   @media(max-width: 1200px) {
      overflow-x: auto;
    }
  }
@@ -50,6 +68,9 @@
   &--600 {width: 600px;}
   &--400 {width: 400px;}
   &--200 {width: 200px;}
+
+  &--min-200 {min-width: 200px;}
+  &--min-400 {min-width: 400px;}
 }
 
 .cell-1 {width: 8.334%}
