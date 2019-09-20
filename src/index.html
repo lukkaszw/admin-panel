@@ -21,19 +21,21 @@
         </header>
         <article class="section__article general__dates">
           <div class="article-container">
-            <div class="row-center">
-              <div class="input-dates margin-sm">
-                  <span class="input-dates__icon-first">
-                      <i class="icon-calendar"></i>
-                  </span>
-                  <span class="input-dates__icon-last">
-                      <i class="icon-calendar"></i>
-                  </span>
-                  <input class="input-dates__input input-dates__input--first" type="date">
-                  <input class="input-dates__input input-dates__input--last" type="date">
+            <form action="">
+              <div class="row-center-xy">
+                <div class="input-dates margin-sm">
+                    <span class="input-dates__icon-first">
+                        <i class="icon-calendar"></i>
+                    </span>
+                    <span class="input-dates__icon-last">
+                        <i class="icon-calendar"></i>
+                    </span>
+                    <input class="input-dates__input input-dates__input--first" type="date">
+                    <input class="input-dates__input input-dates__input--last" type="date">
+                </div>
+                <button type="submit" class="btn btn--square margin-sm"><i class="icon-refresh text-small"></i></button>
               </div>
-              <button class="btn btn--square margin-sm"><i class="icon-refresh text-small"></i></button>
-            </div>
+            </form>
           </div>
         </article>
         <article class="section__article">
@@ -56,7 +58,8 @@
                   <span class="general__stat-value">432</span>
                 </div>
               </div>
-              <div class="rwd-table--1200">
+              <h4 class="margin-x-md margin-y-big ta-left">Earning chart</h4>
+              <div class="rwd-table--1200 margin-y-md ">
                 <img src="images/wykres.png" alt="" class="graph">
               </div>
             </div>
@@ -71,8 +74,8 @@
           <article class="section__article">
             <div class="article-container">
               <button class="btn">+add new</button>
-              <div class="rwd-table rwd-table--600">
-                <table class="table table--max table--min-400  text-v-small">
+              <div class="rwd-table rwd-table--800">
+                <table class="table table--max table--min-600  text-small">
                   <tr class="table__row">
                     <td class="table__cell cell-5 ta-left">Home page</td>
                     <td class="table__cell cell-4 ta-left">
@@ -218,6 +221,173 @@
               <button class="btn">+add new</button>
             </div>
           </article>
+        </section>
+
+        <section class="section" id="baners">
+          <header class="section__header">
+            <h2 class="section__title">Banners</h2>
+          </header>
+          <article class="section__article">
+            <div class="article-container">
+              <button class="btn">+add new</button>
+              <div class="rwd-table rwd-table--800">
+                <table class="table table--max table--min-600  text-small">
+                  <tr class="table__row">
+                    <td class="table__cell cell-5 ta-left">Banner main</td>
+                    <td class="table__cell cell-4 ta-left">
+                      <a href="http://www.homepage.com" class="link">http://www.website.com/bannermain.gif</a>
+                    </td>
+                    <td class="table__cell cell-3 ta-right">
+                      <button class="table__btn btn btn--inline">
+                          <i class="icon-links text-orange"></i>
+                      </button>
+                      <button class="table__btn btn btn--inline">
+                        <i class="icon-trash text-silver"></i>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="table__cell cell-5 ta-left">Sign up banner</td>
+                    <td class="table__cell cell-4 ta-left">
+                      <a href="http://www.homepage.com" class="link">http://www.website.com/signup.gif</a>
+                    </td>
+                    <td class="table__cell cell-3 ta-right">
+                        <button class="table__btn btn btn--inline">
+                            <i class="icon-links text-orange"></i>
+                        </button>
+                        <button class="table__btn btn btn--inline">
+                          <i class="icon-trash text-silver"></i>
+                        </button>
+                    </td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="table__cell cell-5 ta-left">Banner left site</td>
+                    <td class="table__cell cell-4 ta-left">
+                      <a href="http://www.homepage.com" class="link">http://www.website.com/leftsite.gif</a>
+                    </td>
+                    <td class="table__cell cell-3 ta-right">
+                        <button class="table__btn btn btn--inline">
+                            <i class="icon-links text-orange"></i>
+                        </button>
+                        <button class="table__btn btn btn--inline">
+                          <i class="icon-trash text-silver"></i>
+                        </button>
+                    </td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="table__cell cell-5 ta-left">Vertical banner</td>
+                    <td class="table__cell cell-4 ta-left">
+                      <a href="http://www.homepage.com" class="link">http://www.website.com/vert.gif</a>
+                    </td>
+                    <td class="table__cell cell-3 ta-right">
+                        <button class="table__btn btn btn--inline">
+                            <i class="icon-links text-orange"></i>
+                        </button>
+                        <button class="table__btn btn btn--inline">
+                          <i class="icon-trash text-silver"></i>
+                        </button>
+                    </td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="table__cell cell-5 ta-left">Front banner</td>
+                    <td class="table__cell cell-4 ta-left">
+                      <a href="http://www.homepage.com" class="link">http://www.website.com/front.gif</a>
+                    </td>
+                    <td class="table__cell cell-3 ta-right">
+                        <button class="table__btn btn btn--inline">
+                            <i class="icon-links text-orange"></i>
+                        </button>
+                        <button class="table__btn btn btn--inline">
+                          <i class="icon-trash text-silver"></i>
+                        </button>
+                    </td>
+                  </tr>
+                  <tr class="table__row">
+                    <td class="table__cell cell-5 ta-left">Horizontal banner</td>
+                    <td class="table__cell cell-4 ta-left">
+                      <a href="http://www.homepage.com" class="link">http://www.website.com/horizontal.gif</a>
+                    </td>
+                    <td class="table__cell cell-3 ta-right">
+                        <button class="table__btn btn btn--inline">
+                            <i class="icon-links text-orange"></i>
+                        </button>
+                        <button class="table__btn btn btn--inline">
+                          <i class="icon-trash text-silver"></i>
+                        </button>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+              <button class="btn">+add new</button>
+            </div>
+          </article>
+        </section>
+
+        <section  class="section" id="personal-data">
+          <header class="section__header">
+            <h2 class="section__title">Personal Data</h2>
+          </header>
+          <form action="">
+            <div class="section__article">
+              <div class="article-container">
+                <div class="row-center-xy margin-y-sm">
+                    <label class="input-label ta-left margin-y-sm" for="name">Name</label>
+                    <input type="text" class="input" id="name" name="name">
+                </div>
+                <div class="row-center-xy margin-y-sm">
+                    <label class="input-label ta-left margin-y-sm" for="surname">Surname</label>
+                    <input type="text" class="input" id="surname" name="surname">
+                </div>
+                <div class="row-center-xy margin-y-sm">
+                    <label class="input-label ta-left margin-y-sm" for="e-mail">E-mail</label>
+                    <input type="text" class="input" id="email" name="email">
+                </div>
+                <div class="row-center-xy margin-y-sm">
+                    <label class="input-label ta-left margin-y-sm" for="phone">Phone number</label>
+                    <input type="text" class="input" id="phone" name="phone">
+                </div>
+              </div>
+            </div>
+            <div class="section__article">
+                <div class="article-container">
+                  <div class="row-center-xy margin-y-sm">
+                      <label class="input-label ta-left margin-y-sm" for="skype">Skype</label>
+                      <input type="text" class="input" id="skype" name="skype">
+                  </div>
+                  <div class="row-center-xy margin-y-sm">
+                      <label class="input-label ta-left margin-y-sm" for="icq">ICQ</label>
+                      <input type="text" class="input" id="icq" name="icq">
+                  </div>
+                  <div class="row-center-xy margin-y-sm">
+                      <label class="input-label ta-left margin-y-sm" for="msn">Msn</label>
+                      <input type="text" class="input" id="msn" name="msn">
+                  </div>
+                </div>
+            </div>
+            <div class="section__article">
+              <div class="article-container">
+                  <div class="row-center-xy margin-y-sm">
+                      <label class="input-label ta-left margin-y-sm" for="wallet">Wallet</label>
+                      <input type="text" class="input" id="wallet" name="wallet">
+                  </div>
+              </div>
+            </div>
+            <div class="section__article">
+                <div class="article-container">
+                    <div class="row-center-xy margin-y-sm">
+                        <label class="input-label ta-left margin-y-sm" for="password">Password</label>
+                        <input type="password" class="input" id="password" name="password">
+                    </div>
+                    <div class="row-center-xy margin-y-sm">
+                        <label class="input-label ta-left margin-y-sm" for="re-password">Repeat</label>
+                        <input type="password" class="input" id="re-password" name="re-password">
+                    </div>
+                </div>
+            </div>
+            <div class="section__article">
+              <button class="btn">Save</button>
+            </div>
+          </form>
         </section>
 
 

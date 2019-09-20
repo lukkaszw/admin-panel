@@ -3,9 +3,6 @@ body {
   background-color: $background-light;
 }
 
-[class*="col"] {
-	float: left;
-}
 
 .col-1 {width: 8.334%}
 .col-2 {width: 16.667%}
@@ -19,14 +16,6 @@ body {
 .col-10 {width: 83.334%}
 .col-11 {width: 91.667%}
 .col-12 {width: 100%}
-
-[class*="col-mid"] {
-  width: 100%;
-}
-
-[class*="col-min"] {
-  width: 100%;
-}
 
 @media (min-width: 600px) {
   .col-min-1 {width: 8.334%}
@@ -87,6 +76,13 @@ body {
   margin: 10px;
 }
 
+.margin-x-md {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+
+
 .margin-y-sm {
   margin: 10px 0;
 }
@@ -96,7 +92,13 @@ body {
 }
 
 .margin-y-md {
-  margin: 40px 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.margin-y-big {
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .ta-left {
@@ -119,6 +121,14 @@ body {
   flex-wrap: wrap;
 }
 
+.row-center-xy {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 .row-end {
   display: flex;
   flex-direction: row;
@@ -128,4 +138,8 @@ body {
 .article-container {
   max-width: 800px;
   margin: 0 auto;
+}
+
+@media (max-width: 800px) {
+  .col-sm-12 { min-width: 100% };
 }

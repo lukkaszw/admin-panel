@@ -343,7 +343,7 @@ template {
 
 .text {
   font-family: "Open Sans", Helvetica, Arial;
-  color: #000000;
+  color: #acacac;
 }
 
 .text-bg {
@@ -398,10 +398,6 @@ body {
   background-color: #eee;
 }
 
-[class*="col"] {
-  float: left;
-}
-
 .col-1 {
   width: 8.334%;
 }
@@ -447,14 +443,6 @@ body {
 }
 
 .col-12 {
-  width: 100%;
-}
-
-[class*="col-mid"] {
-  width: 100%;
-}
-
-[class*="col-min"] {
   width: 100%;
 }
 
@@ -588,6 +576,11 @@ body {
   margin: 10px;
 }
 
+.margin-x-md {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
 .margin-y-sm {
   margin: 10px 0;
 }
@@ -597,7 +590,13 @@ body {
 }
 
 .margin-y-md {
-  margin: 40px 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.margin-y-big {
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .ta-left {
@@ -623,6 +622,19 @@ body {
       flex-wrap: wrap;
 }
 
+.row-center-xy {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
 .row-end {
   display: -ms-flexbox;
   display: flex;
@@ -635,6 +647,12 @@ body {
 .article-container {
   max-width: 800px;
   margin: 0 auto;
+}
+
+@media (max-width: 800px) {
+  .col-sm-12 {
+    min-width: 100%;
+  }
 }
 
 /* Components */
@@ -665,6 +683,25 @@ body {
 
 .btn--square {
   padding: 8px;
+}
+
+.input {
+  box-sizing: border-box;
+  padding: 8px 10px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #d5d5d5;
+  width: 280px;
+}
+
+.input-label {
+  width: 180px;
+}
+
+@media (max-width: 800px) {
+  .input-label {
+    width: 280px;
+  }
 }
 
 .menu {
@@ -1012,6 +1049,10 @@ body {
   min-width: 400px;
 }
 
+.table--min-600 {
+  min-width: 600px;
+}
+
 .cell-1 {
   width: 8.334%;
 }
@@ -1086,6 +1127,7 @@ body {
   margin: 0;
   padding: 5px 10px;
   width: 140px;
+  font-size: 14px;
 }
 
 .input-dates__input:focus {
@@ -1150,6 +1192,7 @@ body {
   background-color: #fff;
   box-shadow: 0 0 4px #bbbbbb;
   margin: 10px 10px 20px 10px;
+  color: #acacac;
 }
 
 .section__header {
@@ -1210,7 +1253,7 @@ body {
 }
 
 .general__stats {
-  max-width: 100%px;
+  max-width: 100%;
   margin: 0 auto;
 }
 
