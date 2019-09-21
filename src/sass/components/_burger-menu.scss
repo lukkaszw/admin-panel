@@ -65,7 +65,7 @@
     background-color: #fff;
   }
 
-  @media(max-width: 800px) {
+  @media(max-width: $hide-side-bar) {
     transform: translateX(-150px);
   }
 }

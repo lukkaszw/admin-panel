@@ -1,34 +1,17 @@
 .text {
   font-family: $brand-font;
-  color: $text-main-color;
+  color: $text-main-clr;
 
-  &-bg {
-    font-size: 26px;
-  }
+  &-xl { font-size: 2 * $normal-fs; }
+  &-x { font-size: 1.75  $normal-fs;}
+  &-l {font-size: $normal-fs;}
+  &-m {font-size: 0.75 * $normal-fs;}
+  &-s {font-size: 0.5 * $normal-fs;}
 
-  &-md {
-    font-size: 18px;
-  }
-
-  &-small {
-    font-size: 15px;
-  }
-
-  &-v-small {
-    font-size: 12px;
-  }
-
-  &-light {
-    color: $color-light;
-  }
-
-  &-silver {
-    color: $color-silver;
-  }
-
-  &-blue {
-    color: $color-blue;
-  }
+  &-light {color: $color-light;}
+  &-silver {color: $color-silver;}
+  &-link {color: $text-link-clr;}
+  &-dark {color: $text-main-clr;}
 
   &-orange {
     color: $color-orange;
@@ -40,15 +23,9 @@
     margin: 5px;
   }
 
-  &-hide-sm {
+  &-s-hide {
     @media (max-width: 800px) {
       display: none;
     }
   }
-
-  &-dark {
-    color: $text-menu-color;
-  }
-
-
 }

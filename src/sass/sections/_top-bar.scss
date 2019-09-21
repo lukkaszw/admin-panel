@@ -1,16 +1,27 @@
 .top-bar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #fff;
-  border-top: 1px solid $background-light;
-  border-bottom: 1px solid $background-light;
+  box-shadow: 0 0 6px rgba(0, 0, 0, .5);
   text-align: right;
 
-  @media (max-width: 800px) {
-    top: 100%;
-    transform: translateY(-100%);
-    text-align: center;
+  &--dark {
+    background-color: $background-dark;
+    color: $text-menu-dark-clr;
+  }
+
+  &--light {
+    background-color: $background-white;
+    color: $text-menu-light-clr;
+  }
+
+  &--fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    @media (max-width: 800px) {
+      top: 100%;
+      transform: translateY(-100%);
+      text-align: center;
+    }
   }
 }

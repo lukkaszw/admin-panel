@@ -1,26 +1,16 @@
 .avatar {
   display: flex;
+  justify-content: center;
   align-items: center;
   position: relative;
 
   &__photo-wrapper {
     position: relative;
-    width: 40px;
-    height: 40px;
-    margin: 10px;
-  }
-
-  &__photo {
-    position: absolute;
-    display: block;
-    background-color: #fff;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    overflow: hidden;
-    width: 40px;
-    height: 40px;
+    width: $avatar-size;
+    height: $avatar-size;
     border-radius: 50%;
+    background-color: #fff;
+    overflow: hidden;
   }
 
   &__img {
@@ -40,6 +30,6 @@
     width: 5px;
     height: 5px;
     border-radius: 50px;
-    background-color: $signer-color-ok;
+    background-color: $signer-clr-ok;
   }
 }

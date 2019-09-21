@@ -2,7 +2,7 @@
   margin: 40px 0 0 200px;
   padding: 10px;
 
-  @media (max-width: 800px) {
+  @media (max-width: $hide-side-bar) {
     margin: 40px 0 0 0;
     padding: 0;
   }

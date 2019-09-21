@@ -1,14 +1,35 @@
 .side-bar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  background-color: $background-dark;
-  width: 200px;
+  min-height: 100vh;
+  
 
 
+  &--fixed {
+    position: fixed;
+  }
 
-  @media (max-width: 800px) {
-    transform: translateX(-100%);
+  &--left {
+    top: 0;
+    left: 0;
+    @media (max-width: $hide-side-bar) {
+      transform: translateX(-100%);
+    }
+  }
+
+  &--right {
+    top: 0;
+    right: 0;
+    @media (max-width: $hide-side-bar) {
+      transform: translateX(100%);
+    }
+  }
+
+  &--dark {
+    background-color: $background-dark;
+    color: $text-menu-dark-clr;
+  }
+
+  &--light {
+    background-color: $background-light;
+    color: $text-menu-light-clr;
   }
 }

@@ -3,7 +3,7 @@
   text-align: center;
   display: flex;
   justify-content: center;
-  box-shadow: 0 0 2px #aaa;
+  box-shadow: 0 0 2px $input-border-clr;
 
   &::before {
     content: "";
@@ -11,7 +11,7 @@
     position: absolute;
     width: 1px;
     height: 80%;
-    box-shadow: 0 0 1px #aaa;
+    box-shadow: 0 0 1px $input-border-clr;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -22,10 +22,12 @@
     padding: 5px 10px;
     width: 140px;
     font-size: 14px;
+    color: $input-clr;
+    border: 1px solid transparent;
 
     &:focus {
       outline: 1px solid transparent;
-      background-color: #aaa;
+      background-color: $input-border-clr;
     }
 
     &::-webkit-inner-spin-button {
@@ -41,29 +43,17 @@
         cursor: pointer;
       }
     }
-
-    &--first {
-      border: 1px solid transparent;
-    }
-
-    &--last {
-      border: 1px solid transparent;
-    }
   }
 
   &__icon-first {
-    display: block;
     position: absolute;
     top: 50%;
     left: 50%;
-    color: #ccc;
     transform: translate(-180%, -50%);
-    z-index: 0;
   }
 
   &__icon-last {
     position: absolute;
-    color: #ccc;
     top: 50%;
     left: 100%;
     transform: translate(-180%, -50%);

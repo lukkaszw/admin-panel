@@ -1,5 +1,5 @@
 .btn {
-  background-color: $btn-main-color;
+  background-color: $btn-main-clr;
   padding: 8px 16px;
   color: $color-light;
   border: none;
@@ -8,7 +8,7 @@
   cursor: pointer;
 
   &:hover {
-    background-color: lighten($btn-main-color, 20%);
+    background-color: lighten($btn-main-clr, 20%);
   }
 
   &--inline {
@@ -20,6 +20,10 @@
     &:hover {
       background-color: $background-light;
     }
+  }
+
+  &:focus {
+    outline: 1px transparent;
   }
 
   &--square {
