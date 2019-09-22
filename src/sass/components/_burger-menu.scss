@@ -1,20 +1,17 @@
 .burger-menu {
   position: fixed;
   top: 7px;
-  left: calc(200px - 40px);
+  left: $side-bar-width - 40px;
   width: 30px;
   height: 26px;
   border-radius: 3px;
   cursor: pointer;
 
   &__inside {
-    position: absolute;
     display: block;
     width: 90%;
-    top: 50%;
-    left: 50%;
     height: 3px;
-    transform: translate(-50%, -50%);
+    @include center;
     border-radius: 3px;
     background-color: #aaa;
   }
@@ -22,11 +19,7 @@
   &::before {
     content: '';
     display: block;
-    position: absolute;
-    width: 90%;
-    top: 10%;
-    left: 50%;
-    height: 3px;
+    @include position-and-size(absolute, 10%, 50%, 90%, 3px);
     transform: translateX(-50%);
     border-radius: 3px;
     background-color: #aaa;
@@ -35,12 +28,7 @@
   &::after {
     content: '';
     display: block;
-    position: absolute;
-    width: 90%;
-    top: 90%;
-    left: 50%;
-    height: 3px;
-    border-radius: 3px;
+    @include position-and-size(absolute, 90%, 50%, 90%, 3px);
     transform: translate(-50%, -100%);
     background-color: #aaa;
   }
@@ -66,6 +54,10 @@
   }
 
   @media(max-width: $hide-side-bar) {
-    transform: translateX(-150px);
+    transform: translateX(- ($side-bar-width - 50px));
+  }
+
+  &.active {
+    transform: translateX(0);
   }
 }

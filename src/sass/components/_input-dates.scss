@@ -8,13 +8,10 @@
   &::before {
     content: "";
     display: block;
-    position: absolute;
     width: 1px;
     height: 80%;
     box-shadow: 0 0 1px $input-border-clr;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    @include center;
   }
 
   &__input {
@@ -46,16 +43,12 @@
   }
 
   &__icon-first {
-    position: absolute;
-    top: 50%;
-    left: 50%;
+    @include position(absolute, 50%, 50%);
     transform: translate(-180%, -50%);
   }
 
   &__icon-last {
-    position: absolute;
-    top: 50%;
-    left: 100%;
+    @include position(absolute, 50%, 100%);
     transform: translate(-180%, -50%);
   }
 }

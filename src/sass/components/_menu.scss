@@ -1,7 +1,5 @@
 .menu {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  @include reset-list;
   font-size: 0;
   color: inherit;
 
@@ -35,11 +33,7 @@
 
   &__signer {
     opacity: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 2px;
-    height: 100%;
+    @include position-and-size(absolute, 0, 0, 2px, 100%);
     background-color: $menu-signer-clr;
   }
 
@@ -52,14 +46,11 @@
   }
 
   &__icon-signal {
-    position: absolute;
     display: block;
-    width: 5px;
-    height: 5px;
+    @include position-and-size(absolute, 25%, 70%, 5px, 5px);
     border-radius: 50%;
     background-color: $brand-main-clr;
-    top: 25%;
-    left: 70%;
+    
   }
 }
 

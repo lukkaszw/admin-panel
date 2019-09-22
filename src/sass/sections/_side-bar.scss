@@ -1,7 +1,7 @@
 .side-bar {
   min-height: 100vh;
-  
-
+  overflow-y: auto;
+  width: $side-bar-width;
 
   &--fixed {
     position: fixed;
@@ -13,13 +13,22 @@
     @media (max-width: $hide-side-bar) {
       transform: translateX(-100%);
     }
+
+    &.active {
+      transform: translateX(0);
+    }
   }
 
   &--right {
     top: 0;
     right: 0;
+
     @media (max-width: $hide-side-bar) {
       transform: translateX(100%);
+    }
+    
+    &.active {
+      transform: translateX(0);
     }
   }
 
@@ -32,4 +41,5 @@
     background-color: $background-light;
     color: $text-menu-light-clr;
   }
+
 }

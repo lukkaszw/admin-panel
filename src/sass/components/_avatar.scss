@@ -14,21 +14,13 @@
   }
 
   &__img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
     width: 40px;
     height: 40px;
-    transform: translate(-50%, -50%);
+    @include center;
   }
 
   &__signal {
-    position: absolute;
-    display: block;
-    right: 0;
-    top: 0;
-    width: 5px;
-    height: 5px;
+    @include position-and-size(absolute, 0, 100%, 5px, 5px);
     border-radius: 50px;
     background-color: $signer-clr-ok;
   }
