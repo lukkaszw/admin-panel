@@ -50,6 +50,33 @@
 
 //Columns
 
+$breakpoints: (
+  's': (
+    'min': 0,
+    'max': 400px,
+  ),
+  'm': (
+    'min': 401px,
+    'max': 700px,
+  ),
+  'l': (
+    'min': 701px,
+    'max': 1024px,
+  ),
+  'x': (
+    'min': 1025px,
+    'max': 1280px,
+  ),
+  'xl': (
+    'min': 1281px,
+    'max': 1600px,
+  ),
+  'xxl': (
+    'min': 1601px,
+    'max': 4096px,
+  )
+);
+
 .col-1 {width: 8.334%}
 .col-2 {width: 16.667%}
 .col-3 {width: 25%}
@@ -63,99 +90,26 @@
 .col-11 {width: 91.667%}
 .col-12 {width: 100%}
 
-@media (max-width: 400px) {
-  .col-s-1 {width: 8.334%}
-  .col-s-2 {width: 16.667%}
-  .col-s-3 {width: 25%}
-  .col-s-4 {width: 33.334%}
-  .col-s-5 {width: 41.667%}
-  .col-s-6 {width: 50%}
-  .col-s-7 {width: 58.334%}
-  .col-s-8 {width: 66.667%}
-  .col-s-9 {width: 75%}
-  .col-s-10 {width: 83.334%}
-  .col-s-11 {width: 91.667%}
-  .col-s-12 {width: 100%}
-}
-
-@media (min-width: 401px) and (max-width: 700px) {
-.col-m-1 {min-width: 8.334%}
-.col-m-2 {min-width: 16.667%}
-.col-m-3 {min-width: 25%}
-.col-m-4 {min-width: 33.334%}
-.col-m-5 {min-width: 41.667%}
-.col-m-6 {min-width: 50%}
-.col-m-7 {min-width: 58.334%}
-.col-m-8 {min-width: 66.667%}
-.col-m-9 {min-width: 75%}
-.col-m-10 {min-width: 83.334%}
-.col-m-11 {min-width: 91.667%}
-.col-m-12 {min-width: 100%}
-}
-
-@media (min-width: 701px) and (max-width: 1024px) {
-  .col-l-1 {max-width: 8.334%}
-  .col-l-2 {max-width: 16.667%}
-  .col-l-3 {max-width: 25%}
-  .col-l-4 {max-width: 33.334%}
-  .col-l-5 {max-width: 41.667%}
-  .col-l-6 {max-width: 50%}
-  .col-l-7 {max-width: 58.334%}
-  .col-l-8 {max-width: 66.667%}
-  .col-l-9 {max-width: 75%}
-  .col-l-10 {max-width: 83.334%}
-  .col-l-11 {max-width: 91.667%}
-  .col-l-12 {max-width: 100%}
-}
-
-@media (min-width: 1025px) and (max-width: 1280px) {
-  .col-x-1 {max-width: 8.334%}
-  .col-x-2 {max-width: 16.667%}
-  .col-x-3 {max-width: 25%}
-  .col-x-4 {max-width: 33.334%}
-  .col-x-5 {max-width: 41.667%}
-  .col-x-6 {max-width: 50%}
-  .col-x-7 {max-width: 58.334%}
-  .col-x-8 {max-width: 66.667%}
-  .col-x-9 {max-width: 75%}
-  .col-x-10 {max-width: 83.334%}
-  .col-x-11 {max-width: 91.667%}
-  .col-x-12 {max-width: 100%}
-}
-
-@media (min-width: 1281px) and (max-width: 1600px) {
-  .col-xl-1 {max-width: 8.334%}
-  .col-xl-2 {max-width: 16.667%}
-  .col-xl-3 {max-width: 25%}
-  .col-xl-4 {max-width: 33.334%}
-  .col-xl-5 {max-width: 41.667%}
-  .col-xl-6 {max-width: 50%}
-  .col-xl-7 {max-width: 58.334%}
-  .col-xl-8 {max-width: 66.667%}
-  .col-xl-9 {max-width: 75%}
-  .col-xl-10 {max-width: 83.334%}
-  .col-xl-11 {max-width: 91.667%}
-  .col-xl-12 {max-width: 100%}
-}
-
-@media (min-width: 1601px) {
-  .col-xxl-1 {max-width: 8.334%}
-  .col-xxl-2 {max-width: 16.667%}
-  .col-xxl-3 {max-width: 25%}
-  .col-xxl-4 {max-width: 33.334%}
-  .col-xxl-5 {max-width: 41.667%}
-  .col-xxl-6 {max-width: 50%}
-  .col-xxl-7 {max-width: 58.334%}
-  .col-xxl-8 {max-width: 66.667%}
-  .col-xxl-9 {max-width: 75%}
-  .col-xxl-10 {max-width: 83.334%}
-  .col-xxl-11 {max-width: 91.667%}
-  .col-xxl-12 {max-width: 100%}
+@each $key, $value in $breakpoints {
+  @media (min-width: map-get($value, 'min')) and (max-width: map-get($value, 'max')) {
+    .col-#{$key}-1 {width: 8.334%}
+    .col-#{$key}-2 {width: 16.667%}
+    .col-#{$key}-3 {width: 25%}
+    .col-#{$key}-4 {width: 33.334%}
+    .col-#{$key}-5 {width: 41.667%}
+    .col-#{$key}-6 {width: 50%}
+    .col-#{$key}-7 {width: 58.334%}
+    .col-#{$key}-8 {width: 66.667%}
+    .col-#{$key}-9 {width: 75%}
+    .col-#{$key}-10 {width: 83.334%}
+    .col-#{$key}-11 {width: 91.667%}
+    .col-#{$key}-12 {width: 100%}
+  }
 }
 
 //Margins
 
-$sizes: (
+$margin-multiplier: (
   's': 1,
   'm': 2,
   'l': 3,
@@ -163,7 +117,7 @@ $sizes: (
   'xl': 5,
 );  
 
-@each $key, $value in $sizes {
+@each $key, $value in $margin-multiplier {
   .m-#{$key} { margin: $value * $base-margin }
   .m-#{$key}-y { margin-top: $value * $base-margin; margin-bottom: $value * $base-margin }
   .m-#{$key}-y-null { margin: ($value * $base-margin) 0 }
@@ -175,112 +129,29 @@ $sizes: (
   .m-#{$key}-l {margin-left: $value * $base-margin }
 }
 
-
-// .m-s { margin: $base-margin }
-// .m-s-y { margin-top: $base-margin; margin-bottom: $base-margin }
-// .m-s-y-null { margin: $base-margin 0 }
-// .m-s-x { margin-right: $base-margin; margin-left: $base-margin }
-// .m-s-x-null { margin: 0 $base-margin }
-// .m-s-t { margin-top: $base-margin }
-// .m-s-b { margin-bottom: $base-margin }
-// .m-s-r {margin-right: $base-margin }
-// .m-s-l {margin-left: $base-margin }
-
-// .m-m { margin: 2 * $base-margin }
-// .m-m-y { margin-top: 2 * $base-margin; margin-bottom: 2 * $base-margin }
-// .m-m-y-null { margin: (2 * $base-margin) 0 }
-// .m-m-x { margin-right: 2 * $base-margin; margin-left: 2 * $base-margin }
-// .m-m-x-null { margin: 0 (2 * $base-margin) }
-// .m-m-t { margin-top: 2 * $base-margin }
-// .m-m-b { margin-bottom: 2 * $base-margin }
-// .m-m-r {margin-right: 2 * $base-margin }
-// .m-m-l {margin-left: 2 * $base-margin }
-
-// .m-l { margin: 3 * $base-margin }
-// .m-l-y { margin-top: 3 * $base-margin; margin-bottom: 3 * $base-margin }
-// .m-l-y-null { margin: (3 * $base-margin) 0 }
-// .m-l-x { margin-right: 3 * $base-margin; margin-left: 3 * $base-margin }
-// .m-l-x-null { margin: 0 (3 * $base-margin) }
-// .m-l-t { margin-top: 3 * $base-margin }
-// .m-l-b { margin-bottom: 3 * $base-margin }
-// .m-l-r {margin-right: 3 * $base-margin }
-// .m-l-l {margin-left: 3 * $base-margin }
-
-// .m-x { margin: 4 * $base-margin }
-// .m-x-y { margin-top: 4 * $base-margin; margin-bottom: 4 * $base-margin }
-// .m-x-y-null { margin: (4 * $base-margin) 0 }
-// .m-x-x { margin-right: 4 * $base-margin; margin-left: 4 * $base-margin }
-// .m-x-x-null { margin: 0 (4 * $base-margin) }
-// .m-x-t { margin-top: 4 * $base-margin }
-// .m-x-b { margin-bottom: 4 * $base-margin }
-// .m-x-r {margin-right: 4 * $base-margin }
-// .m-x-l {margin-left: 4 * $base-margin }
-
-// .m-xl { margin: 5 * $base-margin }
-// .m-xl-y { margin-top: 5 * $base-margin; margin-bottom: 5 * $base-margin }
-// .m-xl-y-null { margin: (5 * $base-margin) 0 }
-// .m-xl-x { margin-right: 5 * $base-margin; margin-left: 5 * $base-margin }
-// .m-xl-x-null { margin: 0 (5 * $base-margin) }
-// .m-xl-t { margin-top: 5 * $base-margin }
-// .m-xl-b { margin-bottom: 5 * $base-margin }
-// .m-xl-r {margin-right: 5 * $base-margin }
-// .m-xl-l {margin-left: 5 * $base-margin }
-
 .m-center { margin-left: auto; margin-right: auto}
 
 //Padding
 
+$padding-multiplier: (
+  's': 1,
+  'm': 2,
+  'l': 3,
+  'x': 4,
+  'xl': 5,
+);  
 
-
-.p-s { padding: $base-padding }
-.p-s-y { padding-top: $base-padding; padding-bottom: $base-padding }
-.p-s-y-null { padding: $base-padding 0 }
-.p-s-x { padding-right: $base-padding; padding-left: $base-padding }
-.p-s-x-null { padding: 0 $base-padding }
-.p-s-t { padding-top: $base-padding }
-.p-s-b { padding-bottom: $base-padding }
-.p-s-r {padding-right: $base-padding }
-.p-s-l {padding-left: $base-padding }
-
-.p-m { padding: 2 * $base-padding }
-.p-m-y { padding-top: 2 * $base-padding; padding-bottom: 2 * $base-margin }
-.p-m-y-null { padding: (2 * $base-padding) 0 }
-.p-m-x { padding: 2 * $base-padding; padding-left: 2 * $base-margin }
-.p-m-x-null { padding: 0 (2 * $base-padding) }
-.p-m-t { padding-top: 2 * $base-padding }
-.p-m-b { padding-bottom: 2 * $base-padding }
-.p-m-r {padding-right: 2 * $base-padding }
-.p-m-l {padding-left: 2 * $base-padding }
-
-.p-l { padding: 3 * $base-padding }
-.p-l-y { padding-top: 3 * $base-padding; padding-bottom: 3 * $base-padding }
-.p-l-y-null { margin: (3 * $base-margin) 0 }
-.p-l-x { padding-right: 3 * $base-padding; padding-left: 3 * $base-padding }
-.p-l-x-null { padding: 0 (3 * $base-padding) }
-.p-l-t { padding-top: 3 * $base-padding }
-.p-l-b { padding-bottom: 3 * $base-padding }
-.p-l-r {padding-right: 3 * $base-padding }
-.p-l-l {padding-left: 3 * $base-padding }
-
-.p-x { padding: 4 * $base-padding }
-.p-x-y { padding-top: 4 * $base-margin; padding-bottom: 4 * $base-padding }
-.p-x-y-null { margin: (4 * $base-padding) 0 }
-.p-x-x { padding-right: 4 * $base-padding; padding-left: 4 * $base-padding }
-.p-x-x-null { padding: 0 (4 * $base-padding) }
-.p-x-t { padding-top: 4 * $base-padding }
-.p-x-b { padding-bottom: 4 * $base-padding }
-.p-x-r {padding-right: 4 * $base-padding }
-.p-x-l {padding-left: 4 * $base-padding }
-
-.p-xl { padding: 5 * $base-padding }
-.p-xl-y { padding-top: 5 * $base-padding; padding-bottom: 5 * $base-padding }
-.p-xl-y-null { margin: (5 * $base-margin) 0 }
-.p-xl-x { padding-right: 5 * $base-padding; padding-left: 5 * $base-padding }
-.p-xl-x-null { padding: 0 (5 * $base-padding) }
-.p-xl-t { padding-top: 5 * $base-padding }
-.p-xl-b { padding-bottom: 5 * $base-padding }
-.p-xl-r {padding-right: 5 * $base-padding }
-.p-xl-l {padding-left: 5 * $base-padding }
+@each $key, $value in $padding-multiplier {
+  .p-#{$key} { padding: $value * $base-padding }
+  .p-#{$key}-y { padding-top: $value * $base-padding;padding-bottom: $value * $base-padding }
+  .p-#{$key}-y-null { padding: ($value * $base-padding) 0 }
+  .p-#{$key}-x   { padding-right: $value * $base-padding; padding-left: $value * $base-padding }
+  .p-#{$key}-x-null { padding: 0 ($value * $base-padding) }
+  .p-#{$key}-t { padding-top: $value * $base-padding }
+  .p-#{$key}-b { padding-bottom: $value * $base-padding }
+  .p-#{$key}-r { padding-right: $value * $base-padding }
+  .p-#{$key}-l { padding-left: $value * $base-padding }
+}
 
 // Displays
 
