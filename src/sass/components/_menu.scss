@@ -47,7 +47,7 @@
     opacity: 1;
   }
 
-  &__btn:hover {
+  &__btn:hover, &__btn.active {
     color: $color-light;
   }
 

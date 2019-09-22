@@ -387,6 +387,10 @@ template {
   color: #acacac;
 }
 
+.text-black {
+  color: #000;
+}
+
 .text-orange {
   color: #dd9a1e;
 }
@@ -1314,14 +1318,35 @@ template {
 }
 
 .btn--inline {
-  border: none;
   padding: 0;
   background-color: transparent;
-  vertical-align: center;
+  color: inherit;
+  font-weight: inherit;
+  font-size: inherit;
 }
 
 .btn--inline:hover {
   background-color: #eee;
+}
+
+.btn--table {
+  color: inherit;
+  background-color: transparent;
+  font-weight: inherit;
+  padding: 5px 10px;
+}
+
+.btn--table:hover {
+  background-color: #eee;
+  color: black;
+}
+
+.btn__hide {
+  opacity: 0;
+}
+
+.btn:hover .btn__hide {
+  opacity: 1;
 }
 
 .btn:focus {
@@ -1403,7 +1428,7 @@ template {
   opacity: 1;
 }
 
-.menu__btn:hover {
+.menu__btn:hover, .menu__btn.active {
   color: #fff;
 }
 
@@ -1561,7 +1586,11 @@ template {
 }
 
 .table__row {
-  box-shadow: 0 1px 0 #eee;
+  border-top: 1px solid #eee;
+}
+
+.table__row:last-of-type {
+  border-bottom: 1px solid #eee;
 }
 
 .table__row:hover {
@@ -1572,7 +1601,7 @@ template {
   opacity: 0;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1024px) {
   .table__btn {
     opacity: 1;
   }
@@ -1607,7 +1636,7 @@ template {
 .input-dates__input {
   margin: 0;
   padding: 5px 10px;
-  width: 140px;
+  width: 130px;
   font-size: 14px;
   color: #999;
   border: 1px solid transparent;
@@ -1644,6 +1673,39 @@ template {
   top: 50%;
   left: 100%;
   transform: translate(-180%, -50%);
+}
+
+.pagination {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.pagination__item {
+  display: inline-block;
+  margin: 10px 0;
+}
+
+.pagination__arrow {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.pagination__btn {
+  text-decoration: none;
+  color: #5997fb;
+  background-color: transparent;
+  font-size: 20px;
+  padding: 10px 15px;
+}
+
+.pagination__btn:hover, .pagination__btn.active {
+  background-color: #eee;
+}
+
+.pagination__icon {
+  font-size: 15px;
 }
 
 /*Sections */
