@@ -1624,9 +1624,9 @@ template {
 
 .popup {
   position: fixed;
-  top: 10%;
+  top: 40%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
   background-color: #fff;
   min-width: 300px;
 }
@@ -1648,7 +1648,11 @@ template {
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column;
-  height: 600px;
+  height: 500px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .popup-message__panel {
@@ -1662,9 +1666,8 @@ template {
   margin: 0 10px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 600px), (max-height: 500px) {
   .popup-message {
-    top: 0;
     height: 100vh;
   }
   .popup-message .popup__header {

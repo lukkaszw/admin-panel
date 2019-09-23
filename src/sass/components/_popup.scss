@@ -8,8 +8,8 @@
 
 
 .popup {
-  @include position(fixed, 10%, 50%);
-  transform: translateX(-50%);
+  @include position(fixed, 40%, 50%);
+  transform: translate(-50%, -50%);
   background-color: $background-white;
   min-width: 300px;
 
@@ -31,7 +31,9 @@
   max-width: 100%;
   display: flex;
   flex-direction: column;
-  height: 600px;
+  height: 500px;
+  @include position(fixed, 50%, 50%);
+  transform: translate(-50%, -50%);
 
   &__panel {
     border-top: 1px solid $background-light;
@@ -44,8 +46,7 @@
     margin: 0 10px;
   }
 
-  @media (max-width: 800px) {
-    top: 0;
+  @media (max-width: 600px), (max-height: 500px) {
     height: 100vh;
 
     & .popup__header {
