@@ -3,19 +3,26 @@
   justify-content: center;
   align-items: center;
   position: relative;
+  width: 40px;
+  height: 40px;
+
+  &--big {
+    width: 60px;
+    height: 60px;
+  }
 
   &__photo-wrapper {
     position: relative;
-    width: $avatar-size;
-    height: $avatar-size;
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
     background-color: #fff;
     overflow: hidden;
   }
 
   &__img {
-    width: 40px;
-    height: 40px;
+    width: 100%;
+    height: 100%;
     @include center;
   }
 

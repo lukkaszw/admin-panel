@@ -285,6 +285,15 @@ template {
       justify-content: center;
 }
 
+.row-center-y {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: start;
+      justify-content: start;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
 .row-center-xy {
   display: -ms-flexbox;
   display: flex;
@@ -782,6 +791,10 @@ template {
   margin-right: auto;
 }
 
+.m-0 {
+  margin: 0;
+}
+
 .p-s {
   padding: 10px;
 }
@@ -1160,6 +1173,14 @@ template {
   background-color: #f6b64f;
 }
 
+.btn--secondary {
+  background-color: #aaa;
+}
+
+.btn--secondary:hover {
+  background-color: #dddddd;
+}
+
 .btn--inline {
   padding: 0;
   background-color: transparent;
@@ -1206,17 +1227,41 @@ template {
   font-size: 16px;
   border-radius: 4px;
   border: 1px solid #d5d5d5;
-  width: 280px;
+  color: #acacac;
+  box-sizing: border-box;
 }
 
-.input-label {
-  width: 180px;
+.input--icon-head {
+  padding: 8px 10px 8px 30px;
+  width: 100%;
 }
 
-@media (max-width: 800px) {
-  .input-label {
-    width: 280px;
-  }
+.input--icon-tail {
+  padding: 8px 30px 8px 10px;
+  width: 100%;
+}
+
+.input__icon {
+  color: #acacac;
+  font-style: 16px;
+}
+
+.input__icon--head {
+  position: absolute;
+  top: 50%;
+  left: 8px;
+  transform: translateY(-50%);
+}
+
+.input__icon--tail {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translate(-150%, -50%);
+}
+
+.input-wrapper {
+  position: relative;
 }
 
 .menu {
@@ -1395,20 +1440,27 @@ template {
   -ms-flex-align: center;
       align-items: center;
   position: relative;
+  width: 40px;
+  height: 40px;
+}
+
+.avatar--big {
+  width: 60px;
+  height: 60px;
 }
 
 .avatar__photo-wrapper {
   position: relative;
-  width: 40px;
-  height: 40px;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
   background-color: #fff;
   overflow: hidden;
 }
 
 .avatar__img {
-  width: 40px;
-  height: 40px;
+  width: 100%;
+  height: 100%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1551,6 +1603,138 @@ template {
 
 .pagination__icon {
   font-size: 15px;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.popup-wrapper {
+  display: none;
+}
+
+.popup-wrapper.active {
+  display: block;
+}
+
+.popup {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  min-width: 300px;
+}
+
+.popup__group {
+  border-top: 1px solid #eee;
+}
+
+.popup__title {
+  padding: 20px;
+  margin: 0;
+  color: #acacac;
+}
+
+.popup-message {
+  width: 800px;
+  max-width: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  height: 600px;
+}
+
+.popup-message__panel {
+  border-top: 1px solid #eee;
+  -ms-flex-positive: 1;
+      flex-grow: 1;
+  overflow-y: auto;
+}
+
+.popup-message__person-data {
+  margin: 0 10px;
+}
+
+@media (max-width: 800px) {
+  .popup-message {
+    top: 0;
+    height: 100vh;
+  }
+  .popup-message .popup__header {
+    display: none;
+  }
+}
+
+.message {
+  line-height: 1;
+  max-width: 90%;
+}
+
+.message__cloud {
+  display: inline-block;
+  width: auto;
+  padding: 7px 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  margin: 0;
+}
+
+.message__text {
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.message__text::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: inherit;
+}
+
+.message--get .message__text {
+  background-color: #ccc;
+  color: black;
+}
+
+.message--get .message__text::before {
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.message--send .message__text {
+  background-color: #888;
+  color: white;
+}
+
+.message--send .message__text::before {
+  top: 100%;
+  left: 100%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.info-span {
+  padding: 3px 6px;
+  background-color: #aaa;
+  color: white;
+  font-size: 12px;
+  border-radius: 3px;
+}
+
+.info-span.active {
+  background-color: green;
 }
 
 /*Sections */

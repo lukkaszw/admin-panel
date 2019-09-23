@@ -11,6 +11,14 @@
     background-color: lighten($btn-main-clr, 20%);
   }
 
+  &--secondary {
+    background-color: $btn-secondary-clr;
+
+    &:hover {
+      background-color: lighten($btn-secondary-clr, 20%);
+    }
+  }
+
   &--inline {
     padding: 0;
     background-color: transparent;

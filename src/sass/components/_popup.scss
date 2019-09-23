@@ -1,0 +1,55 @@
+.popup-wrapper {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+}
+
+
+.popup {
+  @include position(fixed, 10%, 50%);
+  transform: translateX(-50%);
+  background-color: $background-white;
+  min-width: 300px;
+
+  &__group {
+    border-top: 1px solid $background-light;
+  }
+
+  &__title {
+    padding: 20px;
+    margin: 0;
+    color: $text-main-clr;
+  }
+
+}
+
+
+.popup-message {
+  width: 800px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 600px;
+
+  &__panel {
+    border-top: 1px solid $background-light;
+    flex-grow: 1;
+    overflow-y: auto;
+  }
+
+  
+  &__person-data {
+    margin: 0 10px;
+  }
+
+  @media (max-width: 800px) {
+    top: 0;
+    height: 100vh;
+
+    & .popup__header {
+      display: none;
+    }
+  }
+}

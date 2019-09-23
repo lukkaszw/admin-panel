@@ -1,0 +1,4 @@
+.backdrop {
+  @include position-and-size(fixed, 0, 0, 100%, 100vh);
+  background-color: $backdrop-clr;
+}
