@@ -15,7 +15,7 @@
 
     <div class="main-container">
 
-      <section class="section general" id="generals">
+      <section class="section general active" id="general">
         <header class="section__header">
           <h2 class="section__title">General Statistic</h2>
         </header>
@@ -391,7 +391,7 @@
                       <td class="table__cell col-4 ta-l">
                         <a href="http://www.homepage.com" class="link">http://www.blurax.com</a>
                       </td>
-                      <td class="table__cell cell-3 ta-r">
+                      <td class="table__cell col-3 ta-r">
                           <button class="table__btn btn btn--inline">
                               <i class="icon-links text-orange"></i>
                           </button>
@@ -435,7 +435,7 @@
           </article>
         </section>
 
-        <section class="section" id="baners">
+        <section class="section" id="banners">
           <header class="section__header">
             <h2 class="section__title">Banners</h2>
           </header>
@@ -776,79 +776,83 @@
       </ul>
     </nav>
 
-    <div class="side-bar side-bar--fixed side-bar--left side-bar--dark">
-      <h1 class="logo m-s-y m-m-x">Just do it</h1>
-      <ul class="menu menu--y">
-        <li class="menu__item">
-          <a href="#" class="menu__btn menu__btn--dark active text-m">
-            <span class="menu__signer"></span>
-            <i class="icon-general m-s-x text-m"></i>
-            <span class="text-m">General</span>
-          </a>
-        </li>
-        <li class="menu__item">
-            <a href="#" class="menu__btn menu__btn--dark">
-                <span class="menu__signer"></span>
-                <i class="icon-details m-s-x text-m"></i>
-                <span class="text-m">Details</span>
+    <div id="side-bar">
+      <div class="side-bar side-bar--fixed side-bar--left side-bar--dark">
+        <h1 class="logo m-s-y m-m-x">Just do it</h1>
+        <ul class="menu menu--y" id="main-menu">
+          <li class="menu__item">
+            <a href="#general" class="menu__btn menu__btn--dark active text-m">
+              <span class="menu__signer"></span>
+              <i class="icon-general m-s-x text-m"></i>
+              <span class="text-m">General</span>
             </a>
-        </li>
-        <li class="menu__item">
+          </li>
+          <li class="menu__item">
+              <a href="#details" class="menu__btn menu__btn--dark">
+                  <span class="menu__signer"></span>
+                  <i class="icon-details m-s-x text-m"></i>
+                  <span class="text-m">Details</span>
+              </a>
+          </li>
+          <li class="menu__item">
+              <a href="#links" class="menu__btn menu__btn--dark">
+                  <span class="menu__signer"></span>
+                  <i class="icon-links m-s-x text-m"></i>
+                  <span class="text-m">Links</span>
+              </a>
+          </li>
+          <li class="menu__item">
+              <a href="#banners" class="menu__btn menu__btn--dark">
+                  <span class="menu__signer"></span>
+                  <i class="icon-banners m-s-x text-m"></i>
+                  <span class="text-m">Banners</span>
+              </a>
+          </li>
+          <li class="menu__item">
+              <a href="#personal-data" class="menu__btn menu__btn--dark">
+                  <span class="menu__signer"></span>
+                  <i class="icon-personaldata m-s-x text-m"></i>
+                  <span class="text-m">Personal data</span>
+              </a>
+          </li>
+          <li class="menu__item">
+              <a href="#payout" class="menu__btn menu__btn--dark">
+                  <span class="menu__signer"></span>
+                  <i class="icon-payout m-s-x text-m"></i>
+                  <span class="text-m">Payout</span>
+              </a>
+          </li>
+          <li class="menu__item">
+              <a href="#postback" class="menu__btn menu__btn--dark">
+                  <span class="menu__signer"></span>
+                  <i class="icon-postback m-s-x text-m"></i>
+                  <span class="text-m">Postback</span>
+              </a>
+          </li>
+        </ul>
+        <div class="separator separator--light m-x-y"></div>
+        <h3 class="text-box-title text-silver">Your manager</h3>
+        <ul class="menu menu--y">
+          <li class="menu__item m-s-y">
             <a href="#" class="menu__btn menu__btn--dark">
-                <span class="menu__signer"></span>
-                <i class="icon-links m-s-x text-m"></i>
-                <span class="text-m">Links</span>
+              <div class="avatar m-s-x">
+                  <div class="avatar__photo-wrapper">
+                    <img class="avatar__img" src="images/avatar.png" alt="">
+                  </div>
+                  <span class="avatar__signal m"></span>
+              </div>
+              <p class="text-m text-link">Mikhael E.</p>
             </a>
-        </li>
-        <li class="menu__item">
-            <a href="#" class="menu__btn menu__btn--dark">
-                <span class="menu__signer"></span>
-                <i class="icon-banners m-s-x text-m"></i>
-                <span class="text-m">Banners</span>
-            </a>
-        </li>
-        <li class="menu__item">
-            <a href="#" class="menu__btn menu__btn--dark">
-                <span class="menu__signer"></span>
-                <i class="icon-personaldata m-s-x text-m"></i>
-                <span class="text-m">Personal data</span>
-            </a>
-        </li>
-        <li class="menu__item">
-            <a href="#" class="menu__btn menu__btn--dark">
-                <span class="menu__signer"></span>
-                <i class="icon-payout m-s-x text-m"></i>
-                <span class="text-m">Payout</span>
-            </a>
-        </li>
-        <li class="menu__item">
-            <a href="#" class="menu__btn menu__btn--dark">
-                <span class="menu__signer"></span>
-                <i class="icon-postback m-s-x text-m"></i>
-                <span class="text-m">Postback</span>
-            </a>
-        </li>
-      </ul>
-      <div class="separator separator--light m-x-y"></div>
-      <h3 class="text-box-title text-silver">Your manager</h3>
-      <ul class="menu menu--y">
-        <li class="menu__item m-s-y">
-          <a href="#" class="menu__btn menu__btn--dark">
-            <div class="avatar m-s-x">
-                <div class="avatar__photo-wrapper">
-                  <img class="avatar__img" src="images/avatar.png" alt="">
-                </div>
-                <span class="avatar__signal m"></span>
-            </div>
-            <p class="text-m text-link">Mikhael E.</p>
-          </a>
-        </li>
-      </ul>
-    </div>
-
-    <div class="burger-menu">
+          </li>
+        </ul>
+      </div>
+      <div class="burger-menu">
         <span class="burger-menu__inside"></span>
+      </div>
     </div>
+ 
+
+
 
     <div class="popup-wrapper" id="popup-quick">
       <div class="backdrop"></div>
@@ -863,7 +867,7 @@
       </div>
     </div>
 
-    <div class="popup-wrapper active" id="popup-message">
+    <div class="popup-wrapper" id="popup-message">
         <div class="backdrop"></div>
         <div class="popup popup-message">
           <div class="popup__header">
@@ -983,5 +987,6 @@
 
   </div>
   
+  <script src="js/script.js" type="module"></script>
 </body>
 </html>

@@ -3,6 +3,11 @@
   box-shadow: 0 0 4px darken($background-light, 20%);
   margin: 10px 10px 20px 10px;
   color: $text-main-clr;
+  display: none;
+
+  &.active {
+    display: block;
+  }
 
   &__header {
     padding: 10px;

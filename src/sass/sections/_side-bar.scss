@@ -2,6 +2,7 @@
   min-height: 100vh;
   overflow-y: auto;
   width: $side-bar-width;
+  transition: .3s;
 
   &--fixed {
     position: fixed;
