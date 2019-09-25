@@ -1205,6 +1205,21 @@ template {
   color: black;
 }
 
+.btn--close {
+  display: block;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  color: white;
+  background-color: red;
+  border-radius: 50%;
+}
+
+.btn--close:hover {
+  background-color: #ff6666;
+}
+
 .btn__hide {
   opacity: 0;
 }
@@ -1639,6 +1654,13 @@ template {
   padding: 20px;
   margin: 0;
   color: #acacac;
+}
+
+.popup__close-btn {
+  position: absolute;
+  top: 10px;
+  left: 100%;
+  transform: translateX(-40px);
 }
 
 .popup-message {

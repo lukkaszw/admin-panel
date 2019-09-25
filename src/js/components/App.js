@@ -1,9 +1,10 @@
 import { select, settings } from '../settings.js';
 import MainMenu from './MainMenu.js';
 import SideBar from './SideBar.js';
+import ContactList from './ContactList.js';
+import TopMenu from './TopMenu.js';
 
 class App {
-
 
   initSideBar() {
     const sideBarElement = document.querySelector(select.wrapperOf.sideBar);
@@ -26,10 +27,21 @@ class App {
     });
   }
 
+  initContactList() {
+    const contactElement = document.querySelector(select.wrapperOf.contactList);
+    this.contactList = new ContactList(contactElement);
+  }
+
+  initTopMenu() {
+    const topMenuElement = document.querySelector(select.wrapperOf.topMenu);
+    this.topMenu = new TopMenu(topMenuElement);
+  }
+
   init() {
     this.initSideBar();
     this.initSections();
     this.initMenu();
+    this.initContactList();
   }
 
 }

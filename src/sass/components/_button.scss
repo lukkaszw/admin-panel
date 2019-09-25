@@ -43,6 +43,20 @@
     }
   }
 
+  &--close {
+    display: block;
+    position: relative;
+    width: $btn-close-size;
+    height: $btn-close-size;
+    line-height: $btn-close-size;
+    color: white;
+    background-color: red;
+    border-radius: 50%;
+    &:hover {
+      background-color: lighten(red, 20%);
+    }
+  }
+
   &__hide {
     opacity: 0;
   }
