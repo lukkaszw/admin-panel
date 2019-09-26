@@ -1,8 +1,10 @@
 import { select } from '../settings.js';
+import TopMenu from './TopMenu.js';
 
 class MainMenu {
   constructor(element, sections) {
     this.getElements(element, sections);
+    this.initTopMenu();
   }
 
   getElements(element, sections) {
@@ -19,19 +21,33 @@ class MainMenu {
     }));
   }
 
-  toggleSection(sectionId) {
-    this.sections.forEach(section => {
-      const id = section.getAttribute('id');
-      if(id === sectionId) {
-        section.classList.toggle('active');
-        section.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start',
-          inline: 'start',
-        });
-        return;
-      }
+  initTopMenu() {
+    this.topMenuElement = document.querySelector(select.wrapperOf.topMenu);
+    this.topMenu = new TopMenu(this.topMenuElement);
+    this.topMenuElement.addEventListener('toggleSection', (e) => {
+      const sectionId = e.detail.sectionId;
+      this.toggleBtn(sectionId);
+      this.toggleSection(sectionId);
     });
+  }
+
+  toggleBtn(sectionId) {
+    const btn = [...this.dom.btns].find(btn => (btn.getAttribute('href').replace('#', '') === sectionId));
+    if(btn) {
+      btn.classList.toggle('active');
+    }
+  }
+
+  toggleSection(sectionId) {
+    const section = [...this.sections].find(section => section.getAttribute('id') === sectionId);
+    if(section) {
+      section.classList.toggle('active');
+      section.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+        inline: 'start',
+      });
+    }
   }
 }
 

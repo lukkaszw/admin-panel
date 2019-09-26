@@ -24,7 +24,7 @@ $btn-close-translate: $btn-close-size + 10px;
     color: $text-main-clr;
   }
 
-  &__close-btn {
+  &__close-btn--top {
     @include position(absolute, 10px, 100%);
     transform: translateX(-$btn-close-translate);
   }

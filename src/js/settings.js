@@ -7,6 +7,7 @@ export const select = {
     contactList: '#contact-list',
     popup: {
       contact: '.contact-popup',
+      quick: '#popup-quick',
     }
   },
   sideBar: {
@@ -18,6 +19,10 @@ export const select = {
   },
   mainMenu: {
     btns: '.menu__btn',
+  },
+  topMenu: {
+    btns: '.top-menu-btn',
+    elements: '.top-menu-element',
   },
   contactList: {
     btns: '.menu__btn',
