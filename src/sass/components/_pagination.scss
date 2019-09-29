@@ -4,12 +4,12 @@
 
   &__item {
     display: inline-block;
-    margin: 10px 0;
+    margin: $base-margin 0;
   }
 
   &__arrow {
     display: inline-block;
-    margin: 0 10px;
+    margin: 0 $base-margin;
   }
 
   &__btn {
@@ -28,6 +28,4 @@
   &__icon {
     font-size: 0.75 * $pagination-fs;
   }
-
-
 }

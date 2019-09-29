@@ -1,7 +1,7 @@
 .section {
   background-color: $background-white;
   box-shadow: 0 0 4px darken($background-light, 20%);
-  margin: 10px 10px 20px 10px;
+  margin: $base-margin $base-margin (2 * $base-margin) $base-margin;
   color: $text-main-clr;
   display: none;
 
@@ -26,6 +26,6 @@
   }
 
   @media (max-width: 800px) {
-    margin: 10px 0 20px 0;
+    margin: $base-margin 0 (2 * $base-margin) 0;
   }
 }

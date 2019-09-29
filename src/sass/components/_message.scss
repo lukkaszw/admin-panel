@@ -21,13 +21,10 @@
     &::before {
       content: '';
       display: block;
-      position: absolute;
-      width: 10px;
-      height: 10px;
+      @include position-and-size(absolute, 0, 0, 10px, 10px);
       background-color: inherit;
-
     }
-   } 
+  } 
 }
 
 .message--get .message__text {
@@ -35,8 +32,6 @@
   color: black;
 
   &::before {
-    top: 0;
-    left: 0;
     transform: translate(-50%, -50%) rotate(45deg);
   }
 }

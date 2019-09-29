@@ -8,7 +8,7 @@
   box-sizing: border-box;
 
   &.invalid {
-    border-color: red;
+    border-color: $invalid-input-clr;
   }
 
   &--icon-head {
@@ -45,7 +45,7 @@
     bottom: -10px;
     left: 0;
     font-size: 10px;
-    color: red;
+    color: $invalid-input-clr;
     text-align: right;
     display: none;
     margin: 0;

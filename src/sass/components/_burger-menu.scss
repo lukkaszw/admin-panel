@@ -1,9 +1,5 @@
 .burger-menu {
-  position: fixed;
-  top: 7px;
-  left: $side-bar-width - 40px;
-  width: 30px;
-  height: 26px;
+  @include position-and-size(fixed, 7px, $side-bar-width - 40px, 30px, 26px);
   border-radius: 3px;
   cursor: pointer;
   transition: .2s;

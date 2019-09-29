@@ -1,9 +1,9 @@
 .main-container {
-  margin: 40px 0 0 200px;
+  margin: (4 * $base-margin) 0 0 (20 * $base-margin);
   padding: 10px;
 
   @media (max-width: $hide-side-bar) {
-    margin: 40px 0 0 0;
+    margin: (4 * $base-margin) 0 0 0;
     padding: 0;
   }
 }

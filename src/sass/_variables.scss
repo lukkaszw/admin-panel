@@ -36,6 +36,7 @@ $input-border-clr: #acacac;
 $backdrop-clr: rgba(0, 0, 0, .7);
 $info-span-clr: #aaa;
 $info-span-active-clr: #080;
+$invalid-input-clr: #f00;
 
 /* Sizes */
 
@@ -70,7 +71,7 @@ $hide-side-bar: 1024px;
 
 $columns-number: 12;
 
-$max-mins-count: 19;
+$max-mins-amount: 19;
 
 $breakpoints: (
   '-s': (

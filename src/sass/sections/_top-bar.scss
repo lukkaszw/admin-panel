@@ -13,10 +13,7 @@
   }
 
   &--fixed {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+    @include position-and-size(fixed, 0, 0, 100%, auto);
 
     @media (max-width: 800px) {
       top: 100%;

@@ -30,14 +30,11 @@ $btn-close-translate: $btn-close-size + 10px;
   }
 }
 
-
 .popup-message {
-  width: 800px;
+  @include position-and-size(fixed, 50%, 50%, 800px, 500px);
   max-width: 100%;
   display: flex;
   flex-direction: column;
-  height: 500px;
-  @include position(fixed, 50%, 50%);
   transform: translate(-50%, -50%);
 
   &__panel {
@@ -46,9 +43,8 @@ $btn-close-translate: $btn-close-size + 10px;
     overflow-y: auto;
   }
 
-  
   &__person-data {
-    margin: 0 10px;
+    margin: 0 $base-margin;
   }
 
   @media (max-width: 600px), (max-height: 500px) {

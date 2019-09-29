@@ -20,7 +20,7 @@
 //Rows
 
 .row {
-  display: flex;
+  @include flex(row, flex-start, flex-start);
 }
 
 .row-wrap {
@@ -29,29 +29,20 @@
 
 
 .row-center {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+  @include flex(row, center, flex-start);
 }
 
 .row-center-y {
-  display: flex;
-  justify-content: start;
-  align-items: center;
+  @include flex(row, start, center);
 }
 
 .row-center-xy {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  @include flex(row, center, center);
 }
 
 
 .row-end {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  @include flex(row, space-between, flex-start);
 }
 
 //Columns
@@ -116,7 +107,7 @@
 
 //Mins - width
 
-@for $i from 1 through $max-mins-count {
+@for $i from 1 through $max-mins-amount {
   .min-#{$i}00 {
     min-width: $i * 100px;
   }
@@ -124,7 +115,7 @@
 
 //Maxs - width
 
-@for $i from 1 through $max-mins-count {
+@for $i from 1 through $max-mins-amount {
   .max-#{$i}00 {
     max-width: $i * 100px;
   }
