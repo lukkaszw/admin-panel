@@ -1,11 +1,11 @@
 .info-span {
   padding: 3px 6px;
-  background-color: #aaa;
+  background-color: $info-span-clr;
   color: white;
   font-size: 12px;
   border-radius: 3px;
 
   &.active {
-    background-color: green;
+    background-color: $info-span-active-clr;
   }
 }

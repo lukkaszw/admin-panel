@@ -1,7 +1,11 @@
 .side-bar {
-  min-height: 100vh;
+  height: 100vh;
   width: $side-bar-width;
   transition: .3s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
 
   &--fixed {
     position: fixed;

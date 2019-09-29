@@ -56,52 +56,17 @@
 
 //Columns
 
-$breakpoints: (
-  '-s': (
-    'min': 0,
-    'max': 400px,
-  ),
-  '-m': (
-    'min': 401px,
-    'max': 700px,
-  ),
-  '-l': (
-    'min': 701px,
-    'max': 1024px,
-  ),
-  '-x': (
-    'min': 1025px,
-    'max': 1280px,
-  ),
-  '-xl': (
-    'min': 1281px,
-    'max': 1600px,
-  ),
-);
-
-@for $i from 1 through 12 {
-  @include grid('');
-}
+@include grid('');
 
 @each $key, $value in $breakpoints {
-  @media (min-width: map-get($value, 'min')) and (max-width: map-get($value, 'max')) {
-    @include grid($key);
+  @each $propertyKey, $propertyValue in $value {
+    @media (#{$propertyKey}: $propertyValue) {
+      @include grid($key);
+    }
   }
 }
 
-@media (min-width: 1601px) {
-  @include grid('-xxl');
-}
-
 //Margins
-
-$margin-multiplier: (
-  's': 1,
-  'm': 2,
-  'l': 3,
-  'x': 4,
-  'xl': 5,
-);  
 
 @each $key, $value in $margin-multiplier {
   .m-#{$key} { margin: $value * $base-margin }
@@ -120,13 +85,6 @@ $margin-multiplier: (
 
 //Padding
 
-$padding-multiplier: (
-  's': 1,
-  'm': 2,
-  'l': 3,
-  'x': 4,
-  'xl': 5,
-);  
 
 @each $key, $value in $padding-multiplier {
   .p-#{$key} { padding: $value * $base-padding }
@@ -158,7 +116,7 @@ $padding-multiplier: (
 
 //Mins - width
 
-@for $i from 1 through 19 {
+@for $i from 1 through $max-mins-count {
   .min-#{$i}00 {
     min-width: $i * 100px;
   }
@@ -166,7 +124,7 @@ $padding-multiplier: (
 
 //Maxs - width
 
-@for $i from 1 through 19 {
+@for $i from 1 through $max-mins-count {
   .max-#{$i}00 {
     max-width: $i * 100px;
   }

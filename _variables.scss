@@ -74,23 +74,25 @@ $max-mins-count: 19;
 
 $breakpoints: (
   '-s': (
-    'max-width': 400px,
+    'min': 0,
+    'max': 400px,
   ),
   '-m': (
-    'min-width': 401px,
+    'min': 401px,
+    'max': 700px,
   ),
   '-l': (
-    'min-width': 701px,
+    'min': 701px,
+    'max': 1024px,
   ),
   '-x': (
-    'min-width': 1025px,
+    'min': 1025px,
+    'max': 1280px,
   ),
   '-xl': (
-    'min-width': 1281px,
+    'min': 1281px,
+    'max': 1600px,
   ),
-  '-xxl': (
-    'min-width': 1601px
-  )
 );
 
 $margin-multiplier: (

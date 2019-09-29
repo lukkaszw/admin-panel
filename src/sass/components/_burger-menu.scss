@@ -41,16 +41,7 @@
     }
   }
 
-  &:hover::before {
-    background-color: #fff;
-  }
-
-  
-  &:hover::after {
-    background-color: #fff;
-  }
-
-  &:hover &__inside {
+  &:hover::before,  &:hover::after,  &:hover &__inside  {
     background-color: #fff;
   }
 
