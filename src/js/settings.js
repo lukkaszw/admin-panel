@@ -5,6 +5,7 @@ export const select = {
     mainMenu: '#main-menu',
     topMenu: '#top-menu',
     contactList: '#contact-list',
+    personalData: '#personal-data',
     popup: {
       contact: '.contact-popup',
       quick: '#popup-quick',
@@ -26,6 +27,22 @@ export const select = {
   },
   contactList: {
     btns: '.menu__btn',
+  },
+  personalData: {
+    form: 'form',
+    inputFor: {
+      name: '#name',
+      surname: '#surname',
+      email: '#email',
+      phone: '#phone',
+      skype: '#skype',
+      icq: '#icq',
+      msn: '#msn',
+      wallet: '#wallet',
+      password: '#password',
+      rePassword: '#re-password',
+    },
+    inputsValidInfo: ' + .input__validate-info',
   },
   popup: {
     closeBtn: '.popup__close-btn',

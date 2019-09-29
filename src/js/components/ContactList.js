@@ -25,9 +25,7 @@ class ContactList {
 
   activateContact(contactId) {
     this.contactPopups.forEach(popup => {
-      if(popup.id === contactId) {
-        popup.open();
-      }
+      popup.id === contactId && popup.open();
       return;
     });
   }

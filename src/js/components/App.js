@@ -2,6 +2,7 @@ import { select, settings } from '../settings.js';
 import MainMenu from './MainMenu.js';
 import SideBar from './SideBar.js';
 import ContactList from './ContactList.js';
+import PersonalData from './PersonalData.js';
 
 class App {
 
@@ -31,11 +32,17 @@ class App {
     this.contactList = new ContactList(contactElement);
   }
 
+  initPersonalData() {
+    const personalDataElement = document.querySelector(select.wrapperOf.personalData);
+    this.personalData = new PersonalData(personalDataElement);
+  }
+
   init() {
     this.initSideBar();
     this.initSections();
     this.initMenu();
     this.initContactList();
+    this.initPersonalData();
   }
 
 }

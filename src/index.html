@@ -542,21 +542,25 @@
         <form>
           <div class="section__article p-m-y">
             <div class="container max-500 p-m-x">
-              <div class="row-end row-wrap m-s-y">
+              <div class="input-wrapper row-end row-wrap m-s-y">
                   <label class="input-label ta-l m-s-y col-4 col-s-12" for="name">Name</label>
                   <input type="text" class="input col-8 col-s-12" id="name" name="name">
+                  <p class="input__validate-info">Must have first letter big and minimum 2 characters</p>
               </div>
-              <div class="row-end row-wrap m-s-y">
+              <div class="input-wrapper row-end row-wrap m-s-y">
                   <label class="input-label ta-l m-s-y col-4 col-s-12" for="surname">Surname</label>
                   <input type="text" class="input col-8 col-s-12" id="surname" name="surname">
+                  <p class="input__validate-info">Must have first letter big and minimum 2 characters</p>
               </div>
-              <div class="row-end row-wrap m-s-y">
+              <div class="input-wrapper row-end row-wrap m-s-y">
                   <label class="input-label ta-l m-s-y col-4 col-s-12" for="email">E-mail</label>
                   <input type="text" class="input col-8 col-s-12" id="email" name="email">
+                  <p class="input__validate-info">Must be an email!</p>
               </div>
-              <div class="row-end row-wrap m-s-y">
+              <div class="input-wrapper row-end row-wrap m-s-y">
                   <label class="input-label ta-l m-s-y col-4 col-s-12" for="phone">Phone number</label>
                   <input type="text" class="input col-8 col-s-12" id="phone" name="phone">
+                  <p class="input__validate-info">Must be an phone number format</p>
               </div>
             </div>
           </div>
@@ -586,13 +590,15 @@
           </div>
           <div class="section__article">
               <div class="container max-500 p-m-x">
-                  <div class="row-end row-wrap m-s-y">
+                  <div class="input-wrapper row-end row-wrap m-s-y">
                       <label class="input-label ta-l m-s-y col-4 col-s-12" for="password">Password</label>
                       <input type="password" class="input col-8 col-s-12" id="password" name="password">
+                      <p class="input__validate-info">Minimum: 8 characters, one big and one small char, one special char</p>
                   </div>
-                  <div class="row-end row-wrap m-s-y">
+                  <div class="input-wrapper row-end row-wrap m-s-y">
                       <label class="input-label ta-l m-s-y col-4 col-s-12" for="re-password">Repeat</label>
                       <input type="password" class="input col-8 col-s-12" id="re-password" name="re-password">
+                      <p class="input__validate-info">Must be the same as password</p>
                   </div>
               </div>
           </div>
