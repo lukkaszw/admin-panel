@@ -18,7 +18,6 @@ class Popup {
     this.dom.backdrop.addEventListener('click', () => this.close());
     this.dom.closeBtn.addEventListener('click', () => this.close());
     document.addEventListener('keydown', (e) => {
-      console.log(this.isOpen);
       if(!this.isOpen) return;
       if(e.key === 'Escape') {
         this.close();
@@ -34,7 +33,6 @@ class Popup {
   open() {
     this.dom.wrapper.classList.add('active');
     this.isOpen = true;
-    console.log(this.isOpen);
   }
 }
 
