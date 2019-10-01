@@ -3,6 +3,7 @@ import MainMenu from './MainMenu.js';
 import SideBar from './SideBar.js';
 import ContactList from './ContactList.js';
 import PersonalData from './PersonalData.js';
+import ChartElement from './ChartElement.js';
 
 class App {
 
@@ -37,12 +38,18 @@ class App {
     this.personalData = new PersonalData(personalDataElement);
   }
 
+  initCharts() {
+    const generalChartElement = document.querySelector(select.chartIn.generalStatistic);
+    this.generalChart = new ChartElement(generalChartElement);
+  }
+
   init() {
     this.initSideBar();
     this.initSections();
     this.initMenu();
     this.initContactList();
     this.initPersonalData();
+    this.initCharts();
   }
 
 }

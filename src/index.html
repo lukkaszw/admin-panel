@@ -59,8 +59,10 @@
             </div>
             <h4 class="m-x ta-l">Earning chart</h4>
             <div class="rwd-y m-m">
-              <img src="images/wykres.png" alt="">
-            </div>
+              <div class="canvas__container min-600">
+                  <canvas id="general-statistic-chart"></canvas>
+              </div>
+            </div>    
           </div>
         </article>
       </section>
@@ -789,7 +791,7 @@
           </a>
         </li>
         <li class="menu__item">
-          <a href="#popup-quick" class="menu__btn top-menu-btn">
+          <a href="#popup-quick" class="menu__btn top-menu-close-ref">
               <i class="icon-quit"></i>
           </a>
         </li>
@@ -954,6 +956,7 @@
 
   </div>
   
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
   <script src="js/script.js" type="module"></script>
 </body>
 </html>

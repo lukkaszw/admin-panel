@@ -24,6 +24,7 @@ export const select = {
   topMenu: {
     btns: '.top-menu-btn',
     elements: '.top-menu-element',
+    closeRef: '.top-menu-close-ref'
   },
   contactList: {
     btns: '.menu__btn',
@@ -52,6 +53,9 @@ export const select = {
     form: '.popup-form',
     input: '.input',
     panel: '.popup-message__panel',
+  },
+  chartIn: {
+    generalStatistic: '#general-statistic-chart'
   }
 };
 
