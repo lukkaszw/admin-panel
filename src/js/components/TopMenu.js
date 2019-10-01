@@ -11,8 +11,14 @@ class TopMenu {
     this.dom.wrapper = wrapper;
     this.dom.btns = this.dom.wrapper.querySelectorAll(select.topMenu.btns);
     this.dom.elements = document.querySelectorAll(select.topMenu.elements);
-    const quickPopupElement = document.querySelector(select.wrapperOf.popup.quick);
-    this.quickPopup = new Popup(null, quickPopupElement);
+    const closePopupElement = document.querySelector(select.wrapperOf.popup.quick);
+    this.closePopup = new Popup(null, closePopupElement);
+    this.dom.closeRef = this.dom.wrapper.querySelector(select.topMenu.closeRef);
+
+    this.dom.closeRef.addEventListener('click', (e) => {
+      e.preventDefault();
+      this.closePopup.open();
+    });
 
     this.dom.btns.forEach(btn => btn.addEventListener('click', (e) => {
       e.preventDefault();
