@@ -13,14 +13,10 @@ class SideBar {
     this.dom.burgerBtnElement = this.dom.wrapper.querySelector(select.sideBar.burgerBtn);
     this.burger = new MenuBurgerBtn(this.dom.burgerBtnElement);
 
-    this.dom.wrapper.addEventListener('burgerClicked', () => {
-      // const isActive = e.detail.isBtnActive;
-      this.toggleSideBarActivity();
-    });
+    this.dom.wrapper.addEventListener('burgerClicked', () => this.toggleSideBarActivity());
   }
 
   toggleSideBarActivity() {
-    // isActive ? this.dom.sideBarElement.classList.add('active') : this.dom.sideBarElement.classList.remove('active');
     this.dom.sideBarElement.classList.toggle('active');
   }
 
