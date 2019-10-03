@@ -1,7 +1,7 @@
 import { select } from './settings.js';
 
 /* eslint-disable no-useless-escape */
-export const validatorFor = {
+export const validatorFunctionFor = {
   name: (value) => /^[A-Z].{1,30}$/.test(value),
   surname: (value) => /^[A-Z].{1,30}$/.test(value),
   email: (value) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value),

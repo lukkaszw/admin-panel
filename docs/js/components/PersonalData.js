@@ -1,5 +1,5 @@
 import { select } from '../settings.js';
-import { validatorFor } from '../validators.js';
+import { validatorFunctionFor } from '../validators.js';
 
 class PersonalData {
   constructor(wrapper) {
@@ -37,7 +37,7 @@ class PersonalData {
 
         data[inputName] = inputDom.value;
 
-        if(!validatorFor[inputName](inputDom.value)) {
+        if(!validatorFunctionFor[inputName](inputDom.value)) {
           inputDom.classList.add('invalid');
           formIsValid = false;
         } else {
